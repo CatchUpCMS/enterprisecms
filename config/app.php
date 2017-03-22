@@ -167,9 +167,9 @@ return [
          * Package Service Providers...
          */
         Zizaco\Entrust\EntrustServiceProvider::class,
-
-
-
+        Caffeinated\Modules\ModulesServiceProvider::class,
+        Caffeinated\Themes\ThemesServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
          //
 
         /*
@@ -231,8 +231,8 @@ return [
 
 
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
-
-
+        'Module' => Caffeinated\Modules\Facades\Module::class,
+        'Theme' => Caffeinated\Themes\Facades\Theme::class,
 
 
 

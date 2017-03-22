@@ -21,6 +21,7 @@
     "doctrine/dbal": "^2.5",
     "laravel/framework": "5.3.*",
     "laravelcollective/html": "5.3.1",
+    "filp/whoops": "^2.0",
     "wikimedia/composer-merge-plugin": "^1.2",
     "zizaco/entrust": "5.2.x-dev"
   },

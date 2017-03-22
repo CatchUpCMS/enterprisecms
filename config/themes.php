@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'active' => env('ACTIVE_THEME', 'demo'),
+    'active' => env('ACTIVE_THEME', 'default'),
 
 
 //	'app' => '_layouts.app',

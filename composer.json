@@ -32,12 +32,20 @@
     "symfony/css-selector": "3.1.*",
     "symfony/dom-crawler": "3.1.*"
   },
+  "extra": {
+    "merge-plugin": {
+      "include": [
+        "Modules/*/composer.json"
+      ]
+    }
+  },
   "autoload": {
     "classmap": [
       "database"
     ],
     "psr-4": {
-      "App\\": "app/"
+      "App\\": "app/",
+      "Modules\\": "Modules/"
     }
   },
   "autoload-dev": {

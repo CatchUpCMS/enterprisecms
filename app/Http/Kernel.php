@@ -16,6 +16,7 @@ class Kernel extends HttpKernel
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Modules\Core\Http\Middleware\SetTheme::class,
+        //\App\Http\Middleware\InMaintenanceMiddleware::class,
     ];
 
     /**
@@ -30,7 +31,10 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
+            //\App\Modules\Core\Http\Middleware\ParseJsToBottomMiddleware::class,
+            //\App\Modules\Core\Http\Middleware\MinifyHtmlMiddleware::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Modules\Core\Http\Middleware\MenuMiddleware::class,
         ],
 
         'api' => [
@@ -52,6 +56,7 @@ class Kernel extends HttpKernel
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'role' => \Zizaco\Entrust\Middleware\EntrustRole::class,
         'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
+        'hasPermission' => \Modules\Auth\Http\Middleware\HasPermissionMiddleware::class,
         'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,

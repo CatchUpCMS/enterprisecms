@@ -181,6 +181,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * CMS Package Service Providers
+         */
+        //\Cms\Modules\Core\Providers\CmsModulesProvider::class,
     ],
 
     /*

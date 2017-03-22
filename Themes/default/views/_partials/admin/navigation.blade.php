@@ -2,18 +2,19 @@
     <div class="container-fluid">
 
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-                {{ Setting::get('brand_title', Config::get('core.brand_title')) }}
+                Catchup CMS
             </a>
             <a class="navbar-brand" href="/admin">
                 <i class="fa fa-dashboard fa-lg"></i>
-                {{ trans('kotoba::cms.dashboard') }}
+                Dashboard
             </a>
         </div>
 
@@ -31,11 +32,11 @@
                     </a>
                     <ul class="dropdown-menu">
 
-					<li>
-							<img src="{{ asset('/assets/images/famfamfam_flag_icons/png/en.png') }}">
-							English
+                        <li>
+                            <img src="{{ asset('/assets/images/famfamfam_flag_icons/png/en.png') }}">
+                            English
 
-					</li>
+                        </li>
 
 
                     </ul>
@@ -47,7 +48,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Lang::choice('kotoba::general.setting', 2) }} <span class="caret"></span>
+                            Language <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -194,9 +195,9 @@
 
             <div class="pull-right">
 
-                        <li>
-                            Helptext
-                        </li>
+                <li>
+                    Helptext
+                </li>
 
             </div>
 

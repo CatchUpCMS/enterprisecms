@@ -29,4 +29,19 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    
+    /**
+     * Get users with certain roles with Eloquent calls
+     * 
+     * @param array $roles
+     */
+    
+    public function scopeHasRoles($query,$roles){
+       return $query->whereHas('roles',function($query) use ($roles){
+             $query->whereIn('name',$roles);
+      });
+   }    
+    
+    
 }

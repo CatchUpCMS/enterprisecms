@@ -15,8 +15,6 @@ return [
 
     'active' => env('ACTIVE_THEME', 'default'),
 
-
-//	'app' => '_layouts.app',
     'back' => '_layouts.back',
     'front' => '_layouts.front',
     'simple' => '_layouts.simple',

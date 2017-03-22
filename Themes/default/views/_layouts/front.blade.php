@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @section('seo')
-        <meta name="keywords" content="{{ Setting::get('keywords', Config::get('core.keywords')) }}"/>
-        <meta name="description" content="{{ Setting::get('description', Config::get('core.description')) }}"/>
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
     @show
-    <meta name="author" content="{{ Setting::get('author', Config::get('core.author')) }}"/>
+    <meta name="author" content=""/>
 
     <title>
         @section('title')
-            {{ Setting::get('title', Config::get('core.title')) }}
+            {{ Config::get('core.title') }}
         @show
     </title>
 
@@ -75,7 +75,7 @@
 
 @include($activeTheme . '::' . '_partials._front._cd.cd_overlay')
 @include($activeTheme . '::' . '_partials._front._cd.cd_nav')
-@include($activeTheme . '::' . '_partials._front._cd.cd_search')
+
 
         <!-- ------------------------------------------ js ------------------------------------------ -->
 
@@ -86,12 +86,7 @@
         src="{{ asset('themes/' . $activeTheme . '/assets/js/jquery.mobile.custom.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('themes/' . $activeTheme . '/assets/js/main.js') }}"></script>
 
-<!--
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-	<script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
--->
 
 
 <!-- ------------------------------------------ app loaded js ------------------------------------------ -->
@@ -102,11 +97,6 @@
     @yield('inline-scripts')
 </script>
 
-<!-- ------------------------------------------ google ananlytics js ------------------------------------------ -->
-<script>
-    {!! Setting::get('google_analytics') !!}
-</script>
-<!-- ------------------------------------------ google ananlytics js ------------------------------------------ -->
 
 </body>
 </html>

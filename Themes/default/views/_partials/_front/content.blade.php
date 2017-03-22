@@ -1,4 +1,4 @@
-@include('flash::message')
+{{--@include('flash::message')--}}
 
 @if (count($errors) > 0)
     @include($activeTheme . '::' . '_partials.errors')
@@ -8,7 +8,7 @@
     <div class="alert alert-success">
         {{ session('status') }}
     </div>
-    @endif
+@endif
 
 <div class="col-sm-4">
 
@@ -16,4 +16,4 @@
 
 </div>
 
-    @yield('content')
+@yield('content')

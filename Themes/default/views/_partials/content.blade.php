@@ -1,4 +1,4 @@
-@include('flash::message')
+{{--@include('flash::message')--}}
 
 @if (count($errors) > 0)
     @include($activeTheme . '::' . '_partials.errors')
@@ -10,12 +10,9 @@
     </div>
     @endif
 
-            <!-- Buttons -->
-    {{--{!!
-        Widget::alert()
-    !!}--}}
+
 
 
     @yield('content')
 
-    {{-- Breadcrumbs::render('admin') }--}
+

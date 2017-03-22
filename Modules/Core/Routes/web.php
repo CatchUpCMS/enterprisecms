@@ -12,7 +12,12 @@
 */
 
 Route::group(['prefix' => ''], function () {
-    Route::get('/', function () {
-        dd('This is the Core module index page. Build something great!');
-    });
+    Route::get('/', array(
+        'uses' => 'FrontendController@frontend'
+    ));
+
+    Route::get('/landing', array(
+        'uses' => 'FrontendController@landing'
+    ));
+
 });

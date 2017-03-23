@@ -36,7 +36,7 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapWebRoutes();
-
+        $this->mapLoginRoutes();
         $this->mapApiRoutes();
 
         //
@@ -49,11 +49,29 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
+    protected function mapLoginRoutes()
+    {
+        Route::group([
+            'middleware' => 'web',
+            'namespace' => 'Modules\Auth\Http\Controllers\Frontend',
+        ], function ($router) {
+            require module_path('core', 'Routes/login.php');
+        });
+    }
+
+
+    /**
+     * Define the "web" routes for the module.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
     protected function mapWebRoutes()
     {
         Route::group([
             'middleware' => 'web',
-            'namespace'  => $this->namespace,
+            'namespace' => $this->namespace,
         ], function ($router) {
             require module_path('core', 'Routes/web.php');
         });
@@ -70,8 +88,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => 'api',
-            'namespace'  => $this->namespace,
-            'prefix'     => 'api',
+            'namespace' => $this->namespace,
+            'prefix' => 'api',
         ], function ($router) {
             require module_path('core', 'Routes/api.php');
         });

@@ -11,8 +11,10 @@
 |
 */
 
-Route::group(['prefix' => 'relations'], function () {
+Route::group(['prefix' => 'relations', 'middleware' => 'auth'], function () {
+
     Route::get('/', function () {
         dd('This is the Relations module index page. Build something great!');
     });
+
 });

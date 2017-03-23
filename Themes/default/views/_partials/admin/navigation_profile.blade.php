@@ -57,18 +57,14 @@
                         </a>
                     </li>
                     <li class="divider"></li>
-
                     <li><a href="#">Account</a></li>
                     <li><a href="#">Dashboard</a></li>
                     <li class="nav-divider"></li>
                     <li><a href="#">Logout</a></li>
-
-
                     @if (Auth::user()->can('manage_admin'))
                         @include('partials.nav_menu', ['items'=> $menu_navAdmin->roots()])
                         <li class="divider"></li>
                     @endif
-
                     <li>
                         <a href="/auth/logout">
                             {{ trans('kotoba::auth.log_out') }}

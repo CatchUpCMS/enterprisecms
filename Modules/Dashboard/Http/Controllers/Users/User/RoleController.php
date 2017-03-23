@@ -2,8 +2,8 @@
 
 namespace Modules\Auth\Http\Controllers\Backend\User;
 
-use Cms\Modules\Auth\Repositories\Role\RepositoryInterface as RoleRepo;
-use Cms\Modules\Auth\Models\User;
+use Modules\Auth\Repositories\Role\RepositoryInterface as RoleRepo;
+use Modules\Auth\Models\User;
 use Cms\Modules\Auth as Auth;
 use Illuminate\Http\Request;
 

@@ -4,8 +4,8 @@ namespace Modules\Dashboard\Http\Controllers\Navigation;
 
 use Modules\Dashboard\Http\Controllers\BaseAdminController;
 use Modules\Dashboard\Http\Requests\BackendCreateNavLinkRequest;
-use Cms\Modules\Core\Models\Navigation;
-use Cms\Modules\Core\Models\NavigationLink;
+use Modules\Core\Models\Navigation;
+use Modules\Core\Models\NavigationLink;
 use Former\Facades\Former;
 use Illuminate\Http\Request;
 

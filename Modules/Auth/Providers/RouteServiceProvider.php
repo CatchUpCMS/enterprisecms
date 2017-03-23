@@ -23,9 +23,33 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-
         parent::boot();
+
+
+/*
+        Route::bind('auth_user', function ($user) {
+            $model = config('cms.auth.config.user_model');
+
+            return with(new $model())->where('username', $user)->firstOrFail();
+        });
+
+        Route::bind('auth_user_id', function ($id) {
+            $model = config('cms.auth.config.user_model');
+
+            return with(new $model())->findOrFail($id);
+        });
+
+        Route::bind('auth_role_id', function ($id) {
+            return with(new \Modules\Auth\Models\Role())->with('permissions')->findOrFail($id);
+        });
+
+        Route::bind('auth_apikey_id', function ($id) {
+            return with(new \Modules\Auth\Models\ApiKey())->findOrFail($id);
+        });
+*/
+
+
+
     }
 
     /**

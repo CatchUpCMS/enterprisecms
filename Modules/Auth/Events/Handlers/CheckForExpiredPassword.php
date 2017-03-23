@@ -2,7 +2,7 @@
 
 namespace Modules\Auth\Events\Handlers;
 
-use Cms\Modules\Auth\Events\UserHasLoggedIn;
+use Modules\Auth\Events\UserHasLoggedIn;
 use Carbon\Carbon;
 
 class CheckForExpiredPassword

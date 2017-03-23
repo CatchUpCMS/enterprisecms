@@ -5,7 +5,7 @@ namespace Cms\Modules\Core\Repositories;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Container\Container as App;
 use Illuminate\Database\Eloquent\Model;
-use Cms\Modules\Core\Exceptions\RepositoryException;
+use Modules\Core\Exceptions\RepositoryException;
 
 abstract class BaseEloquentRepository implements BaseRepositoryInterface
 {

@@ -2,9 +2,9 @@
 
 namespace Modules\Auth\Http\Controllers\Backend\User;
 
-use Cms\Modules\Auth\Datatables\PermissionManager;
+use Modules\Auth\Datatables\PermissionManager;
 use Modules\Dashboard\Traits\DataTableTrait;
-use Cms\Modules\Auth\Models\User;
+use Modules\Auth\Models\User;
 
 class PermissionController extends BaseUserController
 {

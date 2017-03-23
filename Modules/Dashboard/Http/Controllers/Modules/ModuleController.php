@@ -5,7 +5,7 @@ namespace Modules\Dashboard\Http\Controllers\Modules;
 use Modules\Dashboard\Datatables\ModuleManager;
 use Modules\Dashboard\Http\Controllers\BaseAdminController;
 use Modules\Dashboard\Traits\DataTableTrait;
-use Cms\Modules\Core\Models\Module;
+use Modules\Core\Models\Module;
 
 class ModuleController extends BaseAdminController
 {

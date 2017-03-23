@@ -2,7 +2,7 @@
 
 namespace Modules\Auth\Http\Controllers\Frontend\ControlPanel;
 
-use Cms\Modules\Auth\Http\Requests\FrontendSettingsRequest;
+use Modules\Auth\Http\Requests\FrontendSettingsRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 

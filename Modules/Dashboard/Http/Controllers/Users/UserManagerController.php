@@ -2,8 +2,8 @@
 
 namespace Modules\Auth\Http\Controllers\Backend;
 
-use Cms\Modules\Core\Http\Controllers\BaseBackendController;
-use Cms\Modules\Auth\Datatables\UserManager;
+use Modules\Core\Http\Controllers\BaseBackendController;
+use Modules\Auth\Datatables\UserManager;
 use Modules\Dashboard\Traits\DataTableTrait;
 
 class UserManagerController extends BaseBackendController

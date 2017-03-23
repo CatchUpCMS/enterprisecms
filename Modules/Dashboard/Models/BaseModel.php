@@ -2,7 +2,7 @@
 
 namespace Modules\Dashboard\Models;
 
-use Cms\Modules\Core\Models\BaseModel as CoreBaseModel;
+use Modules\Core\Models\BaseModel as CoreBaseModel;
 
 class BaseModel extends CoreBaseModel
 {

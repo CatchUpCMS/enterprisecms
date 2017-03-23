@@ -2,12 +2,12 @@
 
 namespace Modules\Auth\Http\Controllers\Frontend\Auth;
 
-use Cms\Modules\Auth\Http\Requests\ChangePasswordRequest;
-use Cms\Modules\Auth\Http\Requests\Frontend2faRequest;
-use Cms\Modules\Auth\Http\Requests\FrontendLoginRequest;
-use Cms\Modules\Auth\Http\Requests\FrontendRegisterRequest;
-use Cms\Modules\Auth\Repositories\User\RepositoryInterface as UserRepo;
-use Cms\Modules\Core\Http\Controllers\BaseFrontendController;
+use Modules\Auth\Http\Requests\ChangePasswordRequest;
+use Modules\Auth\Http\Requests\Frontend2faRequest;
+use Modules\Auth\Http\Requests\FrontendLoginRequest;
+use Modules\Auth\Http\Requests\FrontendRegisterRequest;
+use Modules\Auth\Repositories\User\RepositoryInterface as UserRepo;
+use Modules\Core\Http\Controllers\BaseFrontendController;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -218,7 +218,7 @@ class AuthController extends BaseFrontendController
     protected function isUsingThrottlesLoginsTrait()
     {
         return in_array(
-           ThrottlesLogins::class, class_uses_recursive(get_class($this))
-       );
+            ThrottlesLogins::class, class_uses_recursive(get_class($this))
+        );
     }
 }

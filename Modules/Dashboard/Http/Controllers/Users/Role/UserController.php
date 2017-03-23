@@ -3,10 +3,10 @@
 namespace Modules\Auth\Http\Controllers\Backend\Role;
 
 use Modules\Dashboard\Traits\DataTableTrait;
-use Cms\Modules\Auth\Datatables\UserManager;
-use Cms\Modules\Auth\Http\Requests\BackendAddUserToRoleRequest;
-use Cms\Modules\Auth\Models\Role;
-use Cms\Modules\Auth\Models\User;
+use Modules\Auth\Datatables\UserManager;
+use Modules\Auth\Http\Requests\BackendAddUserToRoleRequest;
+use Modules\Auth\Models\Role;
+use Modules\Auth\Models\User;
 
 class UserController extends BaseRoleController
 {

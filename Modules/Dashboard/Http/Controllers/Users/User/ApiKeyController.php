@@ -3,8 +3,8 @@
 namespace Modules\Auth\Http\Controllers\Backend\User;
 
 use Modules\Dashboard\Traits\DataTableTrait;
-use Cms\Modules\Auth\Datatables\ApiKeyManager;
-use Cms\Modules\Auth\Models\User;
+use Modules\Auth\Datatables\ApiKeyManager;
+use Modules\Auth\Models\User;
 
 class ApiKeyController extends BaseUserController
 {

@@ -2,7 +2,7 @@
 
 namespace Modules\Auth\Events\Handlers;
 
-use Cms\Modules\Auth\Events\UserPasswordWasChanged;
+use Modules\Auth\Events\UserPasswordWasChanged;
 use Illuminate\Support\Facades\Session;
 use Carbon\Carbon;
 

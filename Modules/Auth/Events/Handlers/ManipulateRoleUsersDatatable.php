@@ -3,7 +3,7 @@
 namespace Modules\Auth\Events\Handlers;
 
 use Modules\Dashboard\Events\GotDatatableConfig;
-use Cms\Modules\Auth\Models\Role;
+use Modules\Auth\Models\Role;
 use Illuminate\Support\Facades\Request;
 
 class ManipulateRoleUsersDatatable

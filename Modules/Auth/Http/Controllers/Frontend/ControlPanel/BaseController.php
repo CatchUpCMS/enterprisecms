@@ -2,7 +2,7 @@
 
 namespace Modules\Auth\Http\Controllers\Frontend\ControlPanel;
 
-use Cms\Modules\Core\Http\Controllers\BaseFrontendController;
+use Modules\Core\Http\Controllers\BaseFrontendController;
 use Former;
 
 class BaseController extends BaseFrontendController

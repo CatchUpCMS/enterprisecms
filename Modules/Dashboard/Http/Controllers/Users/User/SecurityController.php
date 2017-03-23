@@ -2,8 +2,8 @@
 
 namespace Modules\Auth\Http\Controllers\Backend\User;
 
-use Cms\Modules\Auth\Http\Requests\BackendUpdatePasswordRequest;
-use Cms\Modules\Auth\Models\User;
+use Modules\Auth\Http\Requests\BackendUpdatePasswordRequest;
+use Modules\Auth\Models\User;
 use Cms\Modules\Auth as Auth;
 use Carbon\Carbon;
 

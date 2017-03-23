@@ -2,8 +2,8 @@
 
 namespace Modules\Auth\Http\Controllers\Backend;
 
-use Cms\Modules\Core\Http\Controllers\BaseBackendController;
-use Cms\Modules\Auth\Datatables\PermissionManager;
+use Modules\Core\Http\Controllers\BaseBackendController;
+use Modules\Auth\Datatables\PermissionManager;
 use Modules\Dashboard\Traits\DataTableTrait;
 
 class PermissionManagerController extends BaseBackendController

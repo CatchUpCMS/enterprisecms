@@ -2,9 +2,9 @@
 
 namespace Modules\Auth\Http\Controllers\Backend\Role;
 
-use Cms\Modules\Auth\Models\Permission;
+use Modules\Auth\Models\Permission;
 use Illuminate\Support\Facades\DB;
-use Cms\Modules\Auth\Models\Role;
+use Modules\Auth\Models\Role;
 use BeatSwitch\Lock\Manager;
 use Illuminate\Http\Request;
 

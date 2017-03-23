@@ -6,7 +6,7 @@ use Modules\Dashboard\Datatables\NavigationManager;
 use Modules\Dashboard\Http\Controllers\BaseAdminController;
 use Modules\Dashboard\Http\Requests\BackendCreateNavigationRequest;
 use Modules\Dashboard\Traits\DataTableTrait;
-use Cms\Modules\Core\Models\Navigation;
+use Modules\Core\Models\Navigation;
 use Former\Facades\Former;
 
 class NavController extends BaseAdminController

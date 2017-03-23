@@ -2,7 +2,7 @@
 
 namespace Cms\Modules\Core\Services;
 
-use Cms\Modules\Core\Models\Navigation;
+use Modules\Core\Models\Navigation;
 use Menu\Menu;
 
 class NavigationService

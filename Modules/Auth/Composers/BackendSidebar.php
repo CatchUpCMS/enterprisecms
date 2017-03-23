@@ -2,7 +2,7 @@
 
 namespace Modules\Auth\Composers;
 
-use Cms\Modules\Auth\Repositories\User\RepositoryInterface as UserRepo;
+use Modules\Auth\Repositories\User\RepositoryInterface as UserRepo;
 
 class BackendSidebar
 {

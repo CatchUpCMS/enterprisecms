@@ -82,7 +82,7 @@ class AuthController extends BaseFrontendController
         if (auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')]))
         {
             $user = auth()->user();
-            dd($user);
+            //dd($user);
         }else{
             return back()->with('error','your username and password are wrong.');
         }

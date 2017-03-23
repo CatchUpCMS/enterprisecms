@@ -13,7 +13,7 @@
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('login', 'Auth\AuthController@webLogin');
-    Route::post('login', ['as'=>'web-login','uses'=>'Auth\AuthController@webLoginPost']);
+    Route::post('login', ['as'=>'web-login','uses'=>'Auth\AuthController@postLogin']);
     Route::get('/staff/login', 'StaffAuth\AuthController@adminLogin');
     Route::post('/staff/login', ['as'=>'admin-login','uses'=>'StaffAuth\AuthController@adminLoginPost']);
     Route::get('/admin/login', 'AdminAuth\AuthController@adminLogin');

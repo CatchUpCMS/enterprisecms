@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Foundation\Http\Response;
 use Illuminate\Filesystem\Filesystem;
+use Caffeinated\Themes\Facades\Theme;
 //use Teepluss\Theme\Contracts\Theme;
 
 class BaseController extends Controller
@@ -69,7 +70,7 @@ class BaseController extends Controller
 
     public function __construct(Theme $theme, Filesystem $file)
     {
-        //$this->setDependencies($theme, $file);
+        $this->setDependencies($theme, $file);
 
         if (method_exists($this, 'boot')) {
             $this->boot();
@@ -123,8 +124,9 @@ class BaseController extends Controller
         $namespace = get_class($class);
         $module = explode('\\', $namespace);
 
-        dd($module);
+        //dd($module);
         $module[1] = app('modules')->find(strtolower($module[1]));
+
         view()->share('_module', $module);
 
         return $module[1];

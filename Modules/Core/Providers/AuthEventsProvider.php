@@ -1,9 +1,9 @@
 <?php
 
-namespace Cms\Modules\Auth\Providers;
+namespace Modules\Auth\Providers;
 
 use Modules\Core\Providers\BaseEventsProvider;
-use Cms\Modules\Auth;
+use Modules\Auth;
 
 class AuthEventsProvider extends BaseEventsProvider
 {
@@ -17,36 +17,36 @@ class AuthEventsProvider extends BaseEventsProvider
          * AuthController@postLogin
          * AuthController@postRegister
          */
-        'Cms\Modules\Auth\Events\UserHasLoggedIn' => [
-            'Cms\Modules\Auth\Events\Handlers\CheckFor2Fa',
-            'Cms\Modules\Auth\Events\Handlers\CheckForExpiredPassword',
-            'Cms\Modules\Auth\Events\Handlers\CheckForEmptyEmail',
-            'Cms\Modules\Auth\Events\Handlers\UpdateLastLogin',
+        'Modules\Auth\Events\UserHasLoggedIn' => [
+            'Modules\Auth\Events\Handlers\CheckFor2Fa',
+            'Modules\Auth\Events\Handlers\CheckForExpiredPassword',
+            'Modules\Auth\Events\Handlers\CheckForEmptyEmail',
+            'Modules\Auth\Events\Handlers\UpdateLastLogin',
         ],
 
         /*
          * AuthController@postRegister
          */
-        'Cms\Modules\Auth\Events\UserIsRegistering' => [
+        'Modules\Auth\Events\UserIsRegistering' => [
         ],
 
         /*
          * AuthController@postRegister
          */
-        'Cms\Modules\Auth\Events\UserHasRegistered' => [
+        'Modules\Auth\Events\UserHasRegistered' => [
         ],
 
         /*
          * SecurityController@postRegister
          */
-        'Cms\Modules\Auth\Events\UserPasswordWasChanged' => [
-            'Cms\Modules\Auth\Events\Handlers\RemovePasswordChangeLock',
+        'Modules\Auth\Events\UserPasswordWasChanged' => [
+            'Modules\Auth\Events\Handlers\RemovePasswordChangeLock',
         ],
 
         'Cms\Modules\Admin\Events\GotDatatableConfig' => [
-            'Cms\Modules\Auth\Events\Handlers\ManipulateUserPermissionsDatatable',
-            'Cms\Modules\Auth\Events\Handlers\ManipulateUserApiKeyDatatable',
-            'Cms\Modules\Auth\Events\Handlers\ManipulateRoleUsersDatatable',
+            'Modules\Auth\Events\Handlers\ManipulateUserPermissionsDatatable',
+            'Modules\Auth\Events\Handlers\ManipulateUserApiKeyDatatable',
+            'Modules\Auth\Events\Handlers\ManipulateRoleUsersDatatable',
         ],
     ];
 

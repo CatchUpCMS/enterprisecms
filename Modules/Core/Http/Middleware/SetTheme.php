@@ -61,7 +61,7 @@ class SetTheme
         View::share('theme_back', $theme . '::' . Config::get('themes.back', $theme . '::' . '_layouts.back'));
         View::share('theme_front', $theme . '::' . Config::get('themes.front', $theme . '::' . '_layouts.front'));
         View::share('theme_simple', $theme . '::' . Config::get('themes.simple', $theme . '::' . '_layouts.simple'));
-
+        View::share('theme_public', $theme . '::' . Config::get('themes.public', $theme . '::' . '_layouts.public'));
         View::share('theme_manager', $theme . '::' . Config::get('themes.manager', $theme . '::' . '_layouts.manager'));
         View::share('theme_agent', $theme . '::' . Config::get('themes.agent', $theme . '::' . '_layouts.agent'));
         View::share('theme_client', $theme . '::' . Config::get('themes.client', $theme . '::' . '_layouts.client'));

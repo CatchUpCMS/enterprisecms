@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms\Modules\Core\Exceptions;
+namespace Modules\Core\Exceptions;
 
 class NotInstalledException extends \Exception
 {

@@ -36,7 +36,7 @@ class ApiKeyManager
                 'sort_order' => 'desc',
                 'source' => 'admin.apikey.manager',
                 'collection' => function () {
-                    $model = 'Cms\Modules\Auth\Models\ApiKey';
+                    $model = 'Modules\Auth\Models\ApiKey';
 
                     return $model::all();
                 },

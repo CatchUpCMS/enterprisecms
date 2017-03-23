@@ -49,7 +49,7 @@ class ManipulateUserPermissionsDatatable
         // rebuild the collection
         $manager = $this->manager;
         array_set($event->config, 'options.collection', function () use ($manager, $user) {
-            $model = 'Cms\Modules\Auth\Models\Permission';
+            $model = 'Modules\Auth\Models\Permission';
 
             return $model::with('roles')->get()
                 ->filter(function ($model) use ($manager, $user) {

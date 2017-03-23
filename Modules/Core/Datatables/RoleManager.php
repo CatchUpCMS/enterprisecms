@@ -37,7 +37,7 @@ class RoleManager
                 'sort_order' => 'desc',
                 'source' => 'admin.role.manager',
                 'collection' => function () {
-                    $model = 'Cms\Modules\Auth\Models\Role';
+                    $model = 'Modules\Auth\Models\Role';
 
                     return $model::with('users')->get();
                 },

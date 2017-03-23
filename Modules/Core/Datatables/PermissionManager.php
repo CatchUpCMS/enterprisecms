@@ -33,7 +33,7 @@ class PermissionManager
                 'sort_order' => 'desc',
                 'source' => 'admin.permission.manager',
                 'collection' => function () {
-                    $model = 'Cms\Modules\Auth\Models\Permission';
+                    $model = 'Modules\Auth\Models\Permission';
 
                     return $model::with('roles')->get();
                 },

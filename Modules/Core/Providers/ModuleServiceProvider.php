@@ -36,7 +36,7 @@ class ModuleServiceProvider extends ServiceProvider
      * @var array
      */
     protected $bindings = [
-        'Modules\Auth\Repositories\User' => ['RepositoryInterface' => 'EloquentRepository'],
+        //'Modules\Auth\Repositories\User' => ['RepositoryInterface' => 'EloquentRepository'],
         'Modules\Auth\Repositories\Role' => ['RepositoryInterface' => 'EloquentRepository'],
     ];
 
@@ -64,7 +64,7 @@ class ModuleServiceProvider extends ServiceProvider
         parent::register();
         $this->app->register(RouteServiceProvider::class);
         // override some config settings
-        $userModel = 'Cms\Modules\Auth\Models\User';
+        $userModel = 'Modules\Auth\Models\User';
         //config(['cms.auth.config.user_model' => $userModel]);
         //config(['auth.table' => with(new $userModel())->getTable()]);
 

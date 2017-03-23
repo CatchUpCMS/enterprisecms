@@ -1,17 +1,13 @@
 <?php
 
-namespace Modules\Auth\Http\Controllers\Frontend\Auth;
+namespace Modules\Auth\Http\Controllers\Frontend\StaffAuth;
 
 use Modules\Auth\Http\Requests\ChangePasswordRequest;
 use Modules\Auth\Http\Requests\Frontend2faRequest;
 use Modules\Auth\Http\Requests\FrontendLoginRequest;
 use Modules\Auth\Http\Requests\FrontendRegisterRequest;
-use Illuminate\Container\Container as App;
-//use Modules\Auth\Repositories\User\RepositoryInterface as UserRepo;
-use Modules\Auth\Repositories\UserRepositoryInterface as UserRepo;
-
+use Modules\Auth\Repositories\User\RepositoryInterface as UserRepo;
 use Modules\Core\Http\Controllers\BaseFrontendController;
-use Caffeinated\Themes\Facades\Theme;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,27 +23,24 @@ class AuthController extends BaseFrontendController
     /**
      * User Repository.
      *
-     * @var \Modules\Auth\Repositories\User\RepositoryInterface
+     * @var \Cms\Modules\Auth\Repositories\User\RepositoryInterface
      */
     protected $user;
 
     protected $lockoutTime;
     protected $maxLoginAttempts;
 
-//UserRepo $user
-
     /**
      * Create a new authentication controller instance.
      *
-     * @param \Modules\Auth\Repositories\User\RepositoryInterface $user
+     * @param \Cms\Modules\Auth\Repositories\User\RepositoryInterface $user
      */
     public function __construct(UserRepo $user)
     {
         // set dependencies
-        //$this->user = $user;
+        $this->user = $user;
         $this->setDependencies(
-            app('Caffeinated\Themes\Facades\Theme'),
-        //app('Teepluss\Theme\Contracts\Theme'),
+            app('Teepluss\Theme\Contracts\Theme'),
             app('Illuminate\Filesystem\Filesystem')
         );
 
@@ -65,32 +58,6 @@ class AuthController extends BaseFrontendController
         return $this->setView('partials.core.login', [], 'theme');
     }
 
-
-    public function webLogin()
-    {
-        //$view, $data = [], $type = 'module'
-        return Theme::View('modules.auth.login');
-        //return $this->setView('partials.core.login', [], 'theme');
-    }
-
-    public function webLoginPost(Request $request)
-    {
-        $this->validate($request, [
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
-        if (auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')]))
-        {
-            $user = auth()->user();
-            dd($user);
-        }else{
-            return back()->with('error','your username and password are wrong.');
-        }
-    }
-
-
-
-
     /**
      * Process the login details and check if the user can be authenticated.
      */
@@ -103,14 +70,14 @@ class AuthController extends BaseFrontendController
         $throttles = ($this->isUsingThrottlesLoginsTrait() && config('cms.auth.config.users.login.throttlingEnabled', 'false') === 'true');
 
         if ($throttles && $this->hasTooManyLoginAttempts($request)) {
-            event(new \Modules\Auth\Events\NotifyUser(Auth::id(), 'auth::notify.account.lockout'));
+            event(new \Cms\Modules\Auth\Events\NotifyUser(Auth::id(), 'auth::notify.account.lockout'));
 
             return $this->sendLockoutResponse($request);
         }
 
         // grab the credentials, and use them to attempt an auth
         if ($this->attemptLogin($request)) {
-            $events = event(new \Modules\Auth\Events\UserHasLoggedIn(Auth::id()));
+            $events = event(new \Cms\Modules\Auth\Events\UserHasLoggedIn(Auth::id()));
 
             return redirect()->intended(route(config('cms.auth.paths.redirect_login', 'pxcms.pages.home')));
         }
@@ -190,7 +157,7 @@ class AuthController extends BaseFrontendController
      */
     public function postRegister(FrontendRegisterRequest $request)
     {
-        event(new \Modules\Auth\Events\UserIsRegistering($request));
+        event(new \Cms\Modules\Auth\Events\UserIsRegistering($request));
 
         // create the user
         $user = $this->user->createWithRoles(
@@ -199,7 +166,7 @@ class AuthController extends BaseFrontendController
             config('cms.auth.config.users.require_activating', false)
         );
 
-        event(new \Modules\Auth\Events\UserHasRegistered($user->id));
+        event(new \Cms\Modules\Auth\Events\UserHasRegistered($user->id));
 
         // if the user requires activating, then dont log them in automatically
         if (config('cms.auth.config.users.require_activating', false) === false) {
@@ -251,7 +218,7 @@ class AuthController extends BaseFrontendController
     protected function isUsingThrottlesLoginsTrait()
     {
         return in_array(
-            ThrottlesLogins::class, class_uses_recursive(get_class($this))
-        );
+           ThrottlesLogins::class, class_uses_recursive(get_class($this))
+       );
     }
 }

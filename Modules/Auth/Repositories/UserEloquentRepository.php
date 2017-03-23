@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Auth\Repositories\User;
+namespace Modules\Auth\Repositories;
 
 use Modules\Auth\Events\UserPasswordWasChanged;
 use Modules\Auth\Http\Requests\ChangePasswordRequest;
-//use Modules\Auth\Repositories\User\RepositoryInterface as UserRepository;
+use Modules\Auth\Repositories\UserRepositoryInterface as UserRepository;
 use Modules\Core\Repositories\BaseEloquentRepository;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -12,11 +12,12 @@ use Illuminate\Support\Facades\Hash;
 //implements UserRepository
 
 
-class EloquentRepository extends BaseEloquentRepository implements UserRepository
+class UserEloquentRepository extends BaseEloquentRepository implements UserRepository
 {
     public function getModel()
     {
-        return config('cms.auth.config.user_model');
+        //config('cms.auth.config.user_model')
+        return 'Modules\Core\Models\User';
     }
 
     /**

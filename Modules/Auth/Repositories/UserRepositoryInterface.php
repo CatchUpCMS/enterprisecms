@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Auth\Repositories\User;
+namespace Modules\Auth\Repositories;
 
 /**
  * Interface UserRepository.
  */
-interface RepositoryInterface
+interface UserRepositoryInterface
 {
     /**
      * Create a user and assign roles to it.

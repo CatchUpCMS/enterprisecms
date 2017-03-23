@@ -2,7 +2,7 @@
 
 namespace Modules\Auth\Http\Controllers\Backend\Api;
 
-use Cms\Modules\Auth as Auth;
+use Modules\Auth as Auth;
 
 class CreateController extends BaseApiController
 {

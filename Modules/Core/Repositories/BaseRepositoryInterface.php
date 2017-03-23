@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms\Modules\Core\Repositories;
+namespace Modules\Core\Repositories;
 
 interface BaseRepositoryInterface
 {

@@ -3,7 +3,7 @@
 namespace Modules\Auth\Http\Controllers\Backend\Role;
 
 use Modules\Core\Http\Controllers\BaseBackendController;
-use Cms\Modules\Auth as Auth;
+use Modules\Auth as Auth;
 use Former;
 
 class BaseRoleController extends BaseBackendController

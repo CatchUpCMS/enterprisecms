@@ -4,7 +4,7 @@ namespace Modules\Auth\Http\Controllers\Backend\User;
 
 use Modules\Auth\Repositories\Role\RepositoryInterface as RoleRepo;
 use Modules\Auth\Models\User;
-use Cms\Modules\Auth as Auth;
+use Modules\Auth as Auth;
 use Illuminate\Http\Request;
 
 class RoleController extends BaseUserController

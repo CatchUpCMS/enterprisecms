@@ -36,7 +36,7 @@ class ManipulateUserApiKeyDatatable
 
         // rebuild the collection
         array_set($event->config, 'options.collection', function () use ($user) {
-            $model = 'Cms\Modules\Auth\Models\ApiKey';
+            $model = 'Modules\Auth\Models\ApiKey';
 
             return $model::where('user_id', $user->id)->get();
         });

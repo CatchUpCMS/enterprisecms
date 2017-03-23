@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms\Modules\Core\Repositories;
+namespace Modules\Core\Repositories;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Container\Container as App;

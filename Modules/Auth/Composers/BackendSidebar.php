@@ -31,7 +31,7 @@ class BackendSidebar
     public function apikeyCount()
     {
         $counter = cache_remember('auth', 'sidebar.auth.apikey.count', 60, function () {
-            return app('Cms\Modules\Auth\Models\ApiKey')
+            return app('Modules\Auth\Models\ApiKey')
                 ->count();
         });
 
@@ -41,7 +41,7 @@ class BackendSidebar
     private function modelCount($model)
     {
         $counter = cache_remember('auth', 'sidebar.auth.'.strtolower($model).'.count', 60, function () use ($model) {
-            return app('Cms\Modules\Auth\Models\\'.ucwords($model))
+            return app('Modules\Auth\Models\\'.ucwords($model))
                 ->count();
         });
 

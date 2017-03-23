@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms\Modules\Core\Console\Commands;
+namespace Modules\Core\Console\Commands;
 
 class CmsUpdateCommand extends CmsInstallCommand
 {

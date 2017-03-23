@@ -1,6 +1,6 @@
 <?php
 
-namespace Cms\Modules\Core\Services;
+namespace Modules\Core\Services;
 
 use Illuminate\Contracts\Foundation\Application;
 

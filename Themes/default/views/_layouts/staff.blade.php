@@ -463,12 +463,20 @@
                     </section>
 
                 </section>
+
             </section>
+
             <section class="tab-pane fade" id="users">
-            </section
-            <section class="tab-pane fade" id="mail">
+
             </section>
+
+            <section class="tab-pane fade" id="mail">
+
+            </section>
+
         </section>
+
+
     </section>
 
 </article>

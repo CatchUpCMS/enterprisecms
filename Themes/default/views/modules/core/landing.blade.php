@@ -1,172 +1,359 @@
-@extends($theme_front)
-
-
-{{-- Web site Title --}}
-@section('title')
-    {{ trans('core::helpdesk.tech_bar') }} :: @parent
+@extends($theme_agent)
+@section('HeadInclude')
 @stop
-
-@section('styles')
+<!-- header -->
+@section('PageHeader')
+<h3>
+  Dashboard
+  <!-- <small>Add</small> -->
+</h3>
 @stop
+<!-- /header -->
+<!-- breadcrumbs -->
+@section('breadcrumbs')
+<ol class="breadcrumb">
 
-@section('scripts')
+</ol>
 @stop
-
-@section('inline-scripts')
-@stop
-
-
-{{-- Content --}}
+<!-- /breadcrumbs -->
+<!-- content -->
 @section('content')
 
+  <div class="box">
+    <div class="box-header with-border">
+      <h3 class="box-title">{!! Lang::get('core::lang.settings') !!}</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <div class="row">
+        <div class="col-md-12">
+          <!--/.col-md-2-->
+          <div class="col-md-2 col-sm-6">
+            <div class="settingiconblue">
+              <div class="settingdivblue">
+                <a href="{{url('/adminpanel/companies/getcompany')}}"><span class="fa-stack fa-2x">
 
-    <div class="container-fluid padding-left-xl padding-right-xl">
-
-        <div class="row">
-            <h1>
-                <p class="pull-right">
-                    {{--
-                        <a href="/tech_support/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
-                            <i class="fa fa-plus fa-fw"></i>
-                            {{ trans('kotoba::button.new') }}
-                        </a>
-                    --}}
-                </p>
-                <i class="fa fa-magnet fa-lg"></i>
-                {{ trans('kotoba::helpdesk.tech_bar') }}
-                <hr>
-            </h1>
-        </div>
-
-
-        <div class="row padding-top-xl">
-            <div class="col-sm-6 col-sm-offset-3">
-                <h2>
-                    <i class="fa fa-sign-in fa-lg"></i>
-                    Device Drop Off
-                    <hr>
-                </h2>
-
-                <div class="col-sm-12">
-                    <h2>
-                        <p>
-                            Please have your device asset tag ready.
-                        </p>
-                        <p>
-                            If you have your employee ID tag with you, please click on the "ID" button below. If not,
-                            please click on the "Email" button.
-                        </p>
-                        <hr>
-                    </h2>
-                </div>
-
-                <div class="row padding-top-xl">
-                    <div class="col-sm-12">
-                        <a href="/tech_support/id" class="btn btn-success btn-block btn-lg"
-                           title="{{ trans('kotoba::button.cancel') }}">
-                            <i class="fa fa-tag fa-fw"></i>
-                            {{ trans('kotoba::button.id') }}
-                        </a>
-                    </div>
-                </div><!-- ./row -->
-
-                <div class="row padding-top-xl">
-                    <div class="col-sm-12">
-                        <a href="/tech_support/email" class="btn btn-primary btn-block btn-lg"
-                           title="{{ trans('kotoba::button.cancel') }}">
-                            <i class="fa fa-envelope fa-fw"></i>
-                            {{ trans('kotoba::button.email') }}
-                        </a>
-                    </div>
-                </div><!-- ./row -->
+                 <i class="fa fa-building-o fa-stack-1x"></i>
+               </span></a>
+              </div>
+              <center class="box-title" >{!! Lang::get('core::lang.company') !!}</center>
             </div>
-        </div>
+          </div>
+          <!--/.col-md-2-->
+          <!--/.col-md-2-->
+          <div class="col-md-2 col-sm-6">
+            <div class="settingiconblue">
+              <div class="settingdivblue">
+                <a href="{{url('/adminpanel/getsystem')}}"><span class="fa-stack fa-2x">
 
-
-        {{--
-        <div class="row padding-top-xl">
-        <div class="col-sm-6">
-
-            <h2>
-                <i class="fa fa-sign-in fa-lg"></i>
-                Device Drop Off
-                <hr>
-            </h2>
-
-            <div class="col-sm-12">
-                <h2>
-                <p>
-                    Please have your device asset tag ready.
-                </p>
-                <p>
-                    If you have your employee ID tag with you, please click on the "ID" button below. If not, please click on the "Email" button.
-                </p>
-                <hr>
-                </h2>
+                 <i class="fa fa-laptop fa-stack-1x"></i>
+                 </span></a>
+              </div>
+              <center class="box-title" >{!! Lang::get('core::lang.system') !!}</center>
             </div>
+          </div>
+          <!--/.col-md-2-->
 
-            <div class="row padding-top-xl">
-                <div class="col-sm-12">
-                    <a href="/tech_support/id" class="btn btn-success btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
-                        <i class="fa fa-tag fa-fw"></i>
-                        {{ trans('kotoba::button.id') }}
-                    </a>
-                </div>
-            </div><!-- ./row -->
+          <!--/.col-md-2-->
+          <div class="col-md-2 col-sm-6">
+            <div class="settingiconblue">
+              <div class="settingdivblue">
+                <a href="{{url('/mailpanel/getmail')}}"><span class="fa-stack fa-2x">
 
-            <div class="row padding-top-xl">
-                <div class="col-sm-12">
-                    <a href="/tech_support/email" class="btn btn-primary btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
-                        <i class="fa fa-envelope fa-fw"></i>
-                        {{ trans('kotoba::button.email') }}
-                    </a>
-                </div>
-            </div><!-- ./row -->
-
-        </div>
-        <div class="col-sm-6">
-
-            <h2>
-                <i class="fa fa-shopping-cart fa-lg"></i>
-                Device Pick Up
-                <hr>
-            </h2>
-
-            <div class="col-sm-12">
-                <h2>
-                <p>
-                    Please have your device asset tag ready.
-                </p>
-                <p>
-                    If you have your employee ID tag with you, please click on the "ID" button below. If not, please click on the "Email" button.
-                </p>
-                <hr>
-                </h2>
+                 <i class="fa fa-at fa-stack-1x"></i>
+                 </span></a>
+              </div>
+              <center class="box-title" >{!! Lang::get('email::lang.mailboxes') !!}</center>
             </div>
+          </div>
+          <!--/.col-md-2-->
 
-            <div class="row padding-top-xl">
-                <div class="col-sm-12">
-                    <a href="/tech_support/id" class="btn btn-success btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
-                        <i class="fa fa-tag fa-fw"></i>
-                        {{ trans('kotoba::button.id') }}
-                    </a>
-                </div>
-            </div><!-- ./row -->
+          <!--/.col-md-2-->
+          <div class="col-md-2 col-sm-6">
+            <div class="settingiconblue">
+              <div class="settingdivblue">
+                <a href="{{url('/ticketspanel/gettickets')}}"><span class="fa-stack fa-2x">
 
-            <div class="row padding-top-xl">
-                <div class="col-sm-12">
-                    <a href="/tech_support/email" class="btn btn-primary btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
-                        <i class="fa fa-envelope fa-fw"></i>
-                        {{ trans('kotoba::button.email') }}
-                    </a>
-                </div>
-            </div><!-- ./row -->
+                 <i class="fa fa-file-text-o fa-stack-1x"></i>
+                 </span></a>
+              </div>
+              <center class="box-title" >{!! Lang::get('tickets::lang.ticket') !!}</center>
+            </div>
+          </div>
+          <!--/.col-md-2-->
+
+          <!--/.col-md-2-->
+          <div class="col-md-2 col-sm-6">
+            <div class="settingiconblue">
+              <div class="settingdivblue">
+                <a href="{{url('/mailpanel/autoresponder')}}"><span class="fa-stack fa-2x">
+
+                 <i class="fa fa-reply-all fa-stack-1x"></i>
+                 </span></a>
+              </div>
+              <center class="box-title" >{!! Lang::get('tickets::lang.auto_response') !!}</center>
+            </div>
+          </div>
+          <!--/.col-md-2-->
+
+          <!--/.col-md-2-->
+          <div class="col-md-2 col-sm-6">
+            <div class="settingiconblue">
+              <div class="settingdivblue">
+                <a href="{{url('/adminpanel/getalert')}}"><span class="fa-stack fa-2x">
+                 <i class="fa fa-bell-o fa-stack-1x"></i>
+                 </span></a>
+              </div>
+              <center class="box-title" >{!! Lang::get('core::lang.alert_notices') !!}</center>
+            </div>
+          </div>
+          <!--/.col-md-2-->
+
+          <!--/.col-md-2-->
+          <div class="col-md-2 col-sm-6">
+            <div class="settingiconblue">
+              <div class="settingdivblue">
+                <a href="{{url('/adminpanel/languages')}}"><span class="fa-stack fa-2x">
+                 <i class="fa fa-language fa-stack-1x"></i>
+                 </span></a>
+              </div>
+              <center class="box-title">{!! Lang::get('core::lang.language') !!}</center>
+            </div>
+          </div>
+          <!--/.col-md-2-->
+          <div class="col-md-2 col-sm-6">
+            <div class="settingiconblue">
+              <div class="settingdivblue">
+                <a href="{{url('/adminpanel/job-scheduler')}}"><span class="fa-stack fa-2x">
+
+                 <i class="fa fa-hourglass-o fa-stack-1x"></i>
+                 </span></a>
+              </div>
+              <center class="box-title" >{!! Lang::get('core::lang.cron') !!}</center>
+            </div>
+          </div>
+          <!--/.col-md-2-->
 
         </div>
-        </div><!-- ./row -->
-        --}}
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- ./box-body -->
+  </div><!-- /.box -->
 
-    </div><!-- ./container -->
 
 
-@stop
+ <div class="box">
+   <div class="box-header with-border">
+     <h3 class="box-title">{!! Lang::get('core::lang.staff') !!}</h3>
+   </div>
+   <!-- /.box-header -->
+   <div class="box-body">
+     <div class="row">
+       <div class="col-md-12">
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{ url('/adminpanel/staff/manage/') }}"><span class="fa-stack fa-2x">
+                 <i class="fa fa-user fa-stack-1x"></i>
+               </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('core::lang.staff') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{ url('/adminpanel/departments/manage') }}"><span class="fa-stack fa-2x">
+                 <i class="fa fa-sitemap fa-stack-1x"></i>
+                 </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('core::lang.departments') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{ url('/adminpanel/teams/manage') }}"><span class="fa-stack fa-2x">
+                 <i class="fa fa-users fa-stack-1x"></i>
+                 </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('core::lang.teams') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{ url('/adminpanel/roles/manage') }}"><span class="fa-stack fa-2x">
+
+                 <i class="fa fa-group fa-stack-1x"></i>
+                 </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('core::lang.roles') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+       </div>
+     </div>
+     <!-- /.row -->
+   </div>
+   <!-- ./box-body -->
+ </div>
+ <!-- /.box -->
+
+
+
+ <div class="box">
+   <div class="box-header with-border">
+     <h3 class="box-title">{!! Lang::get('email::lang.mailboxes') !!}</h3>
+   </div>
+   <!-- /.box-header -->
+   <div class="box-body">
+     <div class="row">
+       <div class="col-md-12">
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{ url('/mailpanel/mailboxes/manage') }}"><span class="fa-stack fa-2x">
+               <i class="fa fa-envelope-o fa-stack-1x"></i>
+               </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('email::lang.mailboxes') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{ url('/mailpanel/mailbanlist') }}"><span class="fa-stack fa-2x">
+                 <i class="fa fa-ban fa-stack-1x"></i>
+                 </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('email::lang.ban_lists') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{ url('/mailpanel/mailtemplates/') }}"><span class="fa-stack fa-2x">
+
+                 <i class="fa fa-mail-forward fa-stack-1x"></i>
+                 </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('email::lang.mailtemplates') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{ url('/mailpanel/maildiagno/getmaildiagno') }}"><span class="fa-stack fa-2x">
+
+                 <i class="fa fa-plus fa-stack-1x"></i>
+                 </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('email::lang.diagnostics') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+
+       </div>
+     </div>
+     <!-- /.row -->
+   </div>
+   <!-- ./box-body -->
+ </div>
+
+
+
+
+ <div class="box">
+   <div class="box-header with-border">
+     <h3 class="box-title">{!! Lang::get('tickets::lang.tickets') !!}</h3>
+   </div>
+   <!-- /.box-header -->
+   <div class="box-body">
+     <div class="row">
+       <div class="col-md-12">
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{url('/ticketspanel/helptopics')}}"><span class="fa-stack fa-2x">
+
+                 <i class="fa fa-file-text-o fa-stack-1x"></i>
+               </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('tickets::lang.help_topics') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{url('/ticketspanel/slaplans')}}"><span class="fa-stack fa-2x">
+
+                 <i class="fa fa-clock-o fa-stack-1x"></i>
+                 </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('tickets::lang.sla_plans') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{url('/ticketspanel/forms')}}"><span class="fa-stack fa-2x">
+
+                 <i class="fa fa-file-text fa-stack-1x"></i>
+                 </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('tickets::lang.forms') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+         <!--/.col-md-2-->
+         <div class="col-md-2 col-sm-6">
+           <div class="settingiconblue">
+             <div class="settingdivblue">
+               <a href="{{url('/ticketspanel/workflows')}}"><span class="fa-stack fa-2x">
+
+                 <i class="fa fa-sitemap fa-stack-1x"></i>
+                 </span></a>
+             </div>
+             <center class="box-title" >{!! Lang::get('tickets::lang.workflows') !!}</center>
+           </div>
+         </div>
+         <!--/.col-md-2-->
+
+       </div>
+     </div>
+     <!-- /.row -->
+   </div>
+   <!-- ./box-body -->
+ </div>
+
+    @section('FooterInclude')
+
+    @stop
+<!-- /content -->
+@endsection

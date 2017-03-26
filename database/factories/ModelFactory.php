@@ -16,6 +16,7 @@ $factory->define(Modules\Core\Models\Staff::class, function (Faker\Generator $fa
     static $password;
 
     return [
+        'company_id' => 1,
         'first_name' => $faker->name,
         'last_name' => $faker->name,
     ];
@@ -25,7 +26,10 @@ $factory->define(Modules\Core\Models\User::class, function (Faker\Generator $fak
     static $password;
 
     return [
-        'name' => $faker->name,
+        'company_id' => 1,
+        'user_name' => $faker->name,
+        'first_name' => $faker->name,
+        'last_name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),

@@ -2,7 +2,7 @@
 
 namespace Modules\Dashboard\Http\Requests;
 
-use Cms\Http\Requests\Request;
+use App\Http\Requests\Request;
 use Auth;
 
 class BackendCreateNavLinkRequest extends Request

@@ -23,15 +23,14 @@
 
     <!-- ------------------------------------------ CSS stylesheets ------------------------------------------ -->
 
-    <link rel="stylesheet" type="text/css"
-          href="{{ asset('assets/vendors/bootstrap-3.3.5-dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/font-awesome-4.4.0/css/font-awesome.css') }}">
 
     <!--
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/bootstrap-3.3.5-dist/css/bootstrap-theme.min.css') }}">
 -->
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/illuminate3/css/standard.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/login.css') }}">
 
     <!-- ------------------------------------------ app loaded CSS stylesheets ------------------------------------------ -->

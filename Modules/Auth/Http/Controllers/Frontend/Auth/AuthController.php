@@ -7,13 +7,14 @@ use Modules\Auth\Http\Requests\Frontend2faRequest;
 use Modules\Auth\Http\Requests\FrontendLoginRequest;
 use Modules\Auth\Http\Requests\FrontendRegisterRequest;
 use Illuminate\Container\Container as App;
+use Illuminate\Http\Request;
 //use Modules\Auth\Repositories\User\RepositoryInterface as UserRepo;
 use Modules\Auth\Repositories\UserRepositoryInterface as UserRepo;
 
 use Modules\Core\Http\Controllers\BaseFrontendController;
 use Caffeinated\Themes\Facades\Theme;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use PragmaRX\Google2FA\Google2FA;
@@ -94,7 +95,7 @@ class AuthController extends BaseFrontendController
     /**
      * Process the login details and check if the user can be authenticated.
      */
-    public function postLogin(FrontendLoginRequest $request)
+    public function postLogin(Request $request)
     {
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
@@ -112,7 +113,8 @@ class AuthController extends BaseFrontendController
         if ($this->attemptLogin($request)) {
             $events = event(new \Modules\Auth\Events\UserHasLoggedIn(Auth::id()));
 
-            return redirect()->intended(route(config('cms.auth.paths.redirect_login', 'pxcms.pages.home')));
+            dd('success');
+            //return redirect()->intended('/');
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts

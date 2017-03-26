@@ -12,13 +12,10 @@
 */
 
 
-Route::group(['middleware' => 'auth'], function () {
+//Route::group(['middleware' => 'web'], function () {
+Route::get('/', 'FrontendController@index');
 
-    Route::get('/', array(
-        'uses' => 'FrontendController@frontend'
-    ));
-
-});
+//});
 
 
 /*Route::group(['prefix' => '', 'middleware' => ['auth']], function () {

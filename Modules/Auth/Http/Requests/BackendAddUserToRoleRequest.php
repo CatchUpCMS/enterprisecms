@@ -2,7 +2,10 @@
 
 namespace Modules\Auth\Http\Requests;
 
-use Cms\Http\Requests\Request;
+use \Illuminate\Support\Facades\Request;
+
+
+//use App\Http\Requests\Request;
 
 class BackendAddUserToRoleRequest extends Request
 {

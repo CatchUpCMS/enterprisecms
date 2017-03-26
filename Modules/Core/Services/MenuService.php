@@ -70,11 +70,12 @@ class MenuService
     public function getMenuData()
     {
         if (Cache::has('menu', 'cms.menu.processing')) {
-            $menu = cache_get('menu', 'cms.menu.processing', []);
+            //public static function get($key, $default = null)
+            $menu = Cache::get('menu', 'cms.menu.processing');
             if (!empty($menu)) {
                 return $menu;
             }
-            cache_flush('menu', 'cms.menu.processing');
+            Cache::forget('menu');
         }
 
 

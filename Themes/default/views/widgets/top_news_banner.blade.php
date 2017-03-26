@@ -4,7 +4,7 @@
 <div class="row row-color">
 
 	<h1 class="text-center">
-		{{ trans('kotoba::cms.news') }}
+		{{ trans('core::cms.news') }}
 	</h1>
 
 	<p class="subheading text-center">
@@ -37,7 +37,7 @@
 
 			<p>
 				<a class="btn btn-primary" href="/news/{{ $article->slug }}" role="button">
-					{{ trans('kotoba::cms.more') }}
+					{{ trans('core::cms.more') }}
 				</a>
 			</p>
 

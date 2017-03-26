@@ -3,7 +3,7 @@
 
 <div class="row">
 	<h1>
-		{{ trans('kotoba::cms.news') }}
+		{{ trans('core::cms.news') }}
 	</h1>
 	<hr>
 </div>
@@ -29,7 +29,7 @@
 			{!! $article->translate($lang)->summary !!}
 		</p>
 		<p class="margin-top-lg">
-			<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('kotoba::cms.more') }}</a>
+			<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('core::cms.more') }}</a>
 		</p>
 	</div>
 </div>
@@ -52,7 +52,7 @@
 		<p>
 			{!! $article->translate($lang)->summary !!}
 		</p>
-			<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('kotoba::cms.more') }}</a>
+			<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('core::cms.more') }}</a>
 	</div>
 
 </div>

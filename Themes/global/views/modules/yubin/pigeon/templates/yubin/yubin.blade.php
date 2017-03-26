@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::general.mail_layout', 2) }} :: @parent
+{{ Lang::choice('core::general.mail_layout', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -38,7 +38,7 @@
 <div class="panel-heading">
 
 	<h3 class="panel-title">
-	{{ trans('kotoba::general.information') }}
+	{{ trans('core::general.information') }}
 	</h3>
 
 </div>
@@ -50,7 +50,7 @@ DEMO !!
 
 <dl class="dl-horizontal">
 	<dt>
-		{{ Lang::choice('kotoba::general.message', 1) }}
+		{{ Lang::choice('core::general.message', 1) }}
 	</dt>
 	<dd>
 		{!! $canned !!}

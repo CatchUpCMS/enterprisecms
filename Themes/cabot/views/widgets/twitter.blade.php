@@ -3,7 +3,7 @@
 
 <div class="row">
 	<h2>
-		{{ trans('kotoba::general.recent') }}&nbsp;{{ Lang::choice('kotoba::general.tweet', 1) }}
+		{{ trans('core::general.recent') }}&nbsp;{{ Lang::choice('core::general.tweet', 1) }}
 	</h2>
 	<hr>
 </div>
@@ -49,7 +49,7 @@ jQuery(document).ready(function() {
 			<hr>
 
 			<p>
-				<a href="https://twitter.com/intent/user?screen_name={{ $screen_name }}" class="btn btn-default"><i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>{{ trans('kotoba::button.follow') }}</a>
+				<a href="https://twitter.com/intent/user?screen_name={{ $screen_name }}" class="btn btn-default"><i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>{{ trans('core::button.follow') }}</a>
 {{--
 				<a href="https://twitter.com/intent/tweet?in_reply_to={!! $tweet->id !!}" class="btn btn-default"><i class="fa fa-reply" aria-hidden="true"></i></a>
 --}}

@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-    {{ trans('kotoba::general.dashboard') }} :: @parent
+    {{ trans('core::general.dashboard') }} :: @parent
 @stop
 
 @section('styles')

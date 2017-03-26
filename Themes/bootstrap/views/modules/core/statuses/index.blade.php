@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::general.status', 2) }} :: @parent
+{{ Lang::choice('core::general.status', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -23,14 +23,14 @@
 <h1>
 {{--
 	<p class="pull-right">
-	<a href="/admin/statuses/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
+	<a href="/admin/statuses/create" class="btn btn-primary" title="{{ trans('core::button.new') }}">
 		<i class="fa fa-plus fa-fw"></i>
-		{{ trans('kotoba::button.new') }}
+		{{ trans('core::button.new') }}
 	</a>
 	</p>
 --}}
 	<i class="fa fa-paperclip fa-lg"></i>
-		{{ Lang::choice('kotoba::general.status', 2) }}
+		{{ Lang::choice('core::general.status', 2) }}
 	<hr>
 </h1>
 </div>
@@ -41,9 +41,9 @@
 <table id="table" class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>{{ trans('kotoba::table.name') }}</th>
-			<th>{{ trans('kotoba::table.description') }}</th>
-			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
+			<th>{{ trans('core::table.name') }}</th>
+			<th>{{ trans('core::table.description') }}</th>
+			<th>{{ Lang::choice('core::table.action', 2) }}</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -56,9 +56,9 @@
 					{{ $status->translate($lang)->description }}
 				</td>
 				<td>
-					<a href="/admin/statuses/{{ $status->id }}/edit" class="btn btn-success" title="{{ trans('kotoba::button.edit') }}">
+					<a href="/admin/statuses/{{ $status->id }}/edit" class="btn btn-success" title="{{ trans('core::button.edit') }}">
 						<i class="fa fa-pencil fa-fw"></i>
-						{{ trans('kotoba::button.edit') }}
+						{{ trans('core::button.edit') }}
 					</a>
 				</td>
 			</tr>
@@ -69,7 +69,7 @@
 
 @else
 <div class="alert alert-info">
-	{{ trans('kotoba::general.error.not_found') }}
+	{{ trans('core::general.error.not_found') }}
 </div>
 @endif
 

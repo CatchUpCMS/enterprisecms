@@ -9,9 +9,9 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	</button>
-		@if (Auth::user() && Auth::user()->can('manage_admin'))
+		@if (Auth::user() && Auth::user()->can('manage-admin'))
 			<a class="navbar-brand" href="/admin">
-			{{ trans('kotoba::general.administration') }}
+			{{ trans('core::general.administration') }}
 			</a>
 		@else
 			<a class="navbar-brand" href="/">

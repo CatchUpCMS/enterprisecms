@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ trans('kotoba::helpdesk.tech_bar') }} :: @parent
+{{ trans('core::helpdesk.tech_bar') }} :: @parent
 @stop
 
 @section('styles')
@@ -26,14 +26,14 @@
 <h1>
 	<p class="pull-right">
 {{--
-	<a href="/tech_support/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
+	<a href="/tech_support/create" class="btn btn-primary" title="{{ trans('core::button.new') }}">
 		<i class="fa fa-plus fa-fw"></i>
-		{{ trans('kotoba::button.new') }}
+		{{ trans('core::button.new') }}
 	</a>
 --}}
 	</p>
 	<i class="fa fa-magnet fa-lg"></i>
-		{{ trans('kotoba::helpdesk.tech_bar') }}
+		{{ trans('core::helpdesk.tech_bar') }}
 	<hr>
 </h1>
 </div>
@@ -61,18 +61,18 @@
 
 	<div class="row padding-top-xl">
 		<div class="col-sm-12">
-			<a href="/tech_support/id" class="btn btn-success btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
+			<a href="/tech_support/id" class="btn btn-success btn-block btn-lg" title="{{ trans('core::button.cancel') }}">
 				<i class="fa fa-tag fa-fw"></i>
-				{{ trans('kotoba::button.id') }}
+				{{ trans('core::button.id') }}
 			</a>
 		</div>
 	</div><!-- ./row -->
 
 	<div class="row padding-top-xl">
 		<div class="col-sm-12">
-			<a href="/tech_support/email" class="btn btn-primary btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
+			<a href="/tech_support/email" class="btn btn-primary btn-block btn-lg" title="{{ trans('core::button.cancel') }}">
 				<i class="fa fa-envelope fa-fw"></i>
-				{{ trans('kotoba::button.email') }}
+				{{ trans('core::button.email') }}
 			</a>
 		</div>
 	</div><!-- ./row -->
@@ -104,18 +104,18 @@
 
 	<div class="row padding-top-xl">
 		<div class="col-sm-12">
-			<a href="/tech_support/id" class="btn btn-success btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
+			<a href="/tech_support/id" class="btn btn-success btn-block btn-lg" title="{{ trans('core::button.cancel') }}">
 				<i class="fa fa-tag fa-fw"></i>
-				{{ trans('kotoba::button.id') }}
+				{{ trans('core::button.id') }}
 			</a>
 		</div>
 	</div><!-- ./row -->
 
 	<div class="row padding-top-xl">
 		<div class="col-sm-12">
-			<a href="/tech_support/email" class="btn btn-primary btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
+			<a href="/tech_support/email" class="btn btn-primary btn-block btn-lg" title="{{ trans('core::button.cancel') }}">
 				<i class="fa fa-envelope fa-fw"></i>
-				{{ trans('kotoba::button.email') }}
+				{{ trans('core::button.email') }}
 			</a>
 		</div>
 	</div><!-- ./row -->
@@ -143,18 +143,18 @@
 
 	<div class="row padding-top-xl">
 		<div class="col-sm-12">
-			<a href="/tech_support/id" class="btn btn-success btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
+			<a href="/tech_support/id" class="btn btn-success btn-block btn-lg" title="{{ trans('core::button.cancel') }}">
 				<i class="fa fa-tag fa-fw"></i>
-				{{ trans('kotoba::button.id') }}
+				{{ trans('core::button.id') }}
 			</a>
 		</div>
 	</div><!-- ./row -->
 
 	<div class="row padding-top-xl">
 		<div class="col-sm-12">
-			<a href="/tech_support/email" class="btn btn-primary btn-block btn-lg" title="{{ trans('kotoba::button.cancel') }}">
+			<a href="/tech_support/email" class="btn btn-primary btn-block btn-lg" title="{{ trans('core::button.cancel') }}">
 				<i class="fa fa-envelope fa-fw"></i>
-				{{ trans('kotoba::button.email') }}
+				{{ trans('core::button.email') }}
 			</a>
 		</div>
 	</div><!-- ./row -->

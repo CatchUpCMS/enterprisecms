@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::cms.module', 2) }} :: @parent
+{{ Lang::choice('core::cms.module', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -31,7 +31,7 @@ oTable =
 <div class="row">
 <h1>
 	<i class="fa fa-gears fa-lg"></i>
-		{{ trans('kotoba::general.active') }}:&nbsp;{{-- $activeModule --}}
+		{{ trans('core::general.active') }}:&nbsp;{{-- $activeModule --}}
 	<hr>
 </h1>
 </div>
@@ -42,13 +42,13 @@ oTable =
 <table id="table" class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>{{ trans('kotoba::table.name') }}</th>
-			<th>{{ trans('kotoba::table.slug') }}</th>
-			<th>{{ trans('kotoba::table.description') }}</th>
-			<th>{{ trans('kotoba::table.version') }}</th>
-			<th>{{ trans('kotoba::table.enabled') }}</th>
-			<th>{{ trans('kotoba::table.order') }}</th>
-			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
+			<th>{{ trans('core::table.name') }}</th>
+			<th>{{ trans('core::table.slug') }}</th>
+			<th>{{ trans('core::table.description') }}</th>
+			<th>{{ trans('core::table.version') }}</th>
+			<th>{{ trans('core::table.enabled') }}</th>
+			<th>{{ trans('core::table.order') }}</th>
+			<th>{{ Lang::choice('core::table.action', 2) }}</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -68,13 +68,13 @@ oTable =
 				</td>
 				<td>{{ $module['order'] }}</td>
 				<td>
-					<a href="/admin/modules/{{ $module['slug'] }}" class="btn btn-success" title="{{ trans('kotoba::button.edit') }}">
+					<a href="/admin/modules/{{ $module['slug'] }}" class="btn btn-success" title="{{ trans('core::button.edit') }}">
 						<i class="fa fa-pencil fa-fw"></i>
-						{{ trans('kotoba::button.edit') }}
+						{{ trans('core::button.edit') }}
 					</a>
 					<a href="{{ URL::to($module['slug'] . '/welcome' ) }}" class="btn btn-info" >
 						<i class="fa fa-search fa-fw"></i>
-						{{ trans("kotoba::button.view") }}
+						{{ trans("core::button.view") }}
 					</a>
 				</td>
 			</tr>
@@ -86,7 +86,7 @@ oTable =
 @else
 <div class="alert alert-info">
 </div>
-	{{ trans('kotoba::general.error.not_found') }}
+	{{ trans('core::general.error.not_found') }}
 @endif
 
 

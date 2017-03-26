@@ -26,21 +26,21 @@
             <!-- Nav tabs -->
             <ul class="tabs tabs-horizontal nav navbar-nav navbar-left">
                 <li role="presentation" @yield('Dashboard') id="dashboard"><a
-                            href="{{ url('agent/dashboard') }}">{!! trans('kotoba::helpdesk.dashboard') !!}</a></li>
+                            href="{{ url('agent/dashboard') }}">{!! trans('core::helpdesk.dashboard') !!}</a></li>
                 <li role="presentation" @yield('Tickets') id="tickets"><a href="#ticket-tab" aria-controls="tab"
                                                                           role="tab"
-                                                                          data-toggle="tab">{!! trans('kotoba::helpdesk.tickets') !!}</a>
+                                                                          data-toggle="tab">{!! trans('core::helpdesk.tickets') !!}</a>
                 </li>
                 <li role="presentation" @yield('KB') id="kb"><a href="#kb-tab" aria-controls="tab" role="tab"
                                                                 data-toggle="tab""
-                    >{!! trans('kotoba::helpdesk.knowledge_base') !!}</a></li>
+                    >{!! trans('core::helpdesk.knowledge_base') !!}</a></li>
             </ul>
 
 
             <ul class="nav navbar-nav navbar-right">
 
                 @if (Shinobi::is('super_admin'))
-                    <li><a href="{{ url('support/admin') }}">{!! trans('kotoba::helpdesk.admin_panel') !!}</a></li>
+                    <li><a href="{{ url('support/admin') }}">{!! trans('core::helpdesk.admin_panel') !!}</a></li>
                     @endif
                             <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown notifications-menu">

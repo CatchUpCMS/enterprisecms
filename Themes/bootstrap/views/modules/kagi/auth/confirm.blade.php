@@ -16,7 +16,7 @@
 
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				{{ trans('kotoba::auth.confirmation') }}
+				{{ trans('core::auth.confirmation') }}
 			</div>
 			<div class="panel-body">
 
@@ -27,7 +27,7 @@
 				]) !!}
 
 					<div class="form-group">
-						<label class="col-md-4 control-label">{{ trans('kotoba::account.email') }}</label>
+						<label class="col-md-4 control-label">{{ trans('core::account.email') }}</label>
 						<div class="col-md-6">
 							<input type="email" class="form-control" name="email" value="{{ old('email') }}" autofocus>
 						</div>
@@ -40,7 +40,7 @@
 					<div class="form-group">
 						<div class="col-md-6 col-md-offset-4">
 							<button type="submit" class="btn btn-success btn-block">
-								{{ trans('kotoba::button.register') }}
+								{{ trans('core::button.register') }}
 							</button>
 						</div>
 					</div>

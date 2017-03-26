@@ -23,7 +23,7 @@
                     <ul class="nav navbar-nav">
                         <li>
                             <a href="#" class="sitemap" id="showLeft">
-                                {{ Lang::choice('kotoba::general.category', 2) }}
+                                {{ Lang::choice('core::general.category', 2) }}
                             </a>
                         </li>
                     </ul>
@@ -41,8 +41,8 @@
             @endif
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
-                    <li><a href="/auth/login">{{ trans('kotoba::auth.log_in') }}</a></li>
-                    <li><a href="/auth/register">{{ trans('kotoba::auth.register') }}</a></li>
+                    <li><a href="/auth/login">{{ trans('core::auth.log_in') }}</a></li>
+                    <li><a href="/auth/register">{{ trans('core::auth.register') }}</a></li>
                 @else
                     <li>
                         @if (Auth::user()->avatar != null)
@@ -66,24 +66,24 @@
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="/profiles/{{ Auth::user()->id }}">
-                                    {{ Lang::choice('kotoba::account.profile', 1) }}
+                                    {{ Lang::choice('core::account.profile', 1) }}
                                 </a>
                             </li>
                             <li class="divider"></li>
-                            @if (Auth::user()->can('manage_admin'))
+                            @if (Auth::user()->can('manage-admin'))
                                 <li>
                                     <a href="/admin/users">
-                                        {{ Lang::choice('kotoba::account.user', 2) }}
+                                        {{ Lang::choice('core::account.user', 2) }}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/admin/roles">
-                                        {{ Lang::choice('kotoba::role.role', 2) }}
+                                        {{ Lang::choice('core::role.role', 2) }}
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/admin/permissions">
-                                        {{ Lang::choice('kotoba::permission.permission', 2) }}
+                                        {{ Lang::choice('core::permission.permission', 2) }}
                                     </a>
                                 </li>
                                 <li class="divider"></li>
@@ -95,7 +95,7 @@
                             @endif
                             <li>
                                 <a href="/auth/logout">
-                                    {{ trans('kotoba::auth.log_out') }}
+                                    {{ trans('core::auth.log_out') }}
                                 </a>
                             </li>
                         </ul>
@@ -125,11 +125,11 @@
             </ul>
 
 
-            @if (Auth::user()->can('manage_admin'))
+            @if (Auth::user()->can('manage-admin'))
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Lang::choice('kotoba::general.setting', 2) }} <span class="caret"></span>
+                            {{ Lang::choice('core::general.setting', 2) }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -145,7 +145,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ trans('kotoba::general.other') }} <span class="caret"></span>
+                            {{ trans('core::general.other') }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -161,7 +161,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ trans('kotoba::hr.office') }} <span class="caret"></span>
+                            {{ trans('core::hr.office') }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -177,7 +177,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Lang::choice('kotoba::shop.record', 2) }} <span class="caret"></span>
+                            {{ Lang::choice('core::shop.record', 2) }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -193,7 +193,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Lang::choice('kotoba::shop.order', 2) }} <span class="caret"></span>
+                            {{ Lang::choice('core::shop.order', 2) }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -207,7 +207,7 @@
                 </ul>
             @endif
 
-            @if (Auth::user()->can('manage_admin'))
+            @if (Auth::user()->can('manage-admin'))
                 <ul class="nav navbar-nav navbar-right">
                     <li>temp</li>
                 </ul>

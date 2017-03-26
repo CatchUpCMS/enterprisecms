@@ -23,7 +23,7 @@
             <ul class="nav navbar-nav">
                 <li>
                     <a href="{{url('support/admin')}}">
-                        {!! trans('kotoba::helpdesk.home') !!}
+                        {!! trans('core::helpdesk.home') !!}
                     </a>
                 </li>
             </ul>
@@ -31,12 +31,12 @@
             {{--
                 <!-- Nav tabs -->
                 <ul class="tabs tabs-horizontal nav navbar-nav navbar-left">
-                    <li role="presentation" class="active"><a href="#tabA" aria-controls="tabA" role="tab" data-toggle="tab">{!! trans('kotoba::helpdesk.home') !!}</a></li>
-                    <li role="presentation" class="@yield('Staffs')"><a href="#tabB" aria-controls="tabB" role="tab" data-toggle="tab">{!! trans('kotoba::helpdesk.staffs') !!}</a></li>
-                    <li role="presentation" class="@yield('Emails')"><a href="#tabC" aria-controls="tabC" role="tab" data-toggle="tab">{!! trans('kotoba::helpdesk.emails') !!}</a></li>
-                    <li role="presentation" class="@yield('Manage')"><a href="#tabD" aria-controls="tabD" role="tab" data-toggle="tab">{!! trans('kotoba::helpdesk.manage') !!}</a></li>
-                    <li role="presentation" class="@yield('Settings')"><a href="#tabE" aria-controls="tabE" role="tab" data-toggle="tab">{!! trans('kotoba::helpdesk.settings') !!}</a></li>
-                    <li role="presentation" class="@yield('Themes')"><a href="#tabF" aria-controls="tabF" role="tab" data-toggle="tab">{!! trans('kotoba::helpdesk.themes') !!}</a></li>
+                    <li role="presentation" class="active"><a href="#tabA" aria-controls="tabA" role="tab" data-toggle="tab">{!! trans('core::helpdesk.home') !!}</a></li>
+                    <li role="presentation" class="@yield('Staffs')"><a href="#tabB" aria-controls="tabB" role="tab" data-toggle="tab">{!! trans('core::helpdesk.staffs') !!}</a></li>
+                    <li role="presentation" class="@yield('Emails')"><a href="#tabC" aria-controls="tabC" role="tab" data-toggle="tab">{!! trans('core::helpdesk.emails') !!}</a></li>
+                    <li role="presentation" class="@yield('Manage')"><a href="#tabD" aria-controls="tabD" role="tab" data-toggle="tab">{!! trans('core::helpdesk.manage') !!}</a></li>
+                    <li role="presentation" class="@yield('Settings')"><a href="#tabE" aria-controls="tabE" role="tab" data-toggle="tab">{!! trans('core::helpdesk.settings') !!}</a></li>
+                    <li role="presentation" class="@yield('Themes')"><a href="#tabF" aria-controls="tabF" role="tab" data-toggle="tab">{!! trans('core::helpdesk.themes') !!}</a></li>
                 </ul>
             --}}
 

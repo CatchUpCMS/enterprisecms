@@ -11,7 +11,7 @@ Asset Management
 Simple, attractive and easy to use asset management system. Campus Soft takes advantage of it's tight integration to employees and staff to provide easy access to your data.
 </p>
 
-<a class="btn btn-default" href="/" role="button">{{ trans('kotoba::button.view') }}&nbsp;{{ Lang::choice('kotoba::general.detail', 2) }}&nbsp;&raquo;</a>
+<a class="btn btn-default" href="/" role="button">{{ trans('core::button.view') }}&nbsp;{{ Lang::choice('core::general.detail', 2) }}&nbsp;&raquo;</a>
 
 </article>
 </div>
@@ -26,7 +26,7 @@ Run your whole school district or just one school / site with Campus Soft's CMS.
 All the standard functionality you would expect from a CMS with added benefit that your employees and staff are already part of the system.
 </p>
 
-<a class="btn btn-default" href="/" role="button">{{ trans('kotoba::button.view') }}&nbsp;{{ Lang::choice('kotoba::general.detail', 2) }}&nbsp;&raquo;</a>
+<a class="btn btn-default" href="/" role="button">{{ trans('core::button.view') }}&nbsp;{{ Lang::choice('core::general.detail', 2) }}&nbsp;&raquo;</a>
 
 </article>
 </div>
@@ -41,7 +41,7 @@ Simple and functional system that takes your employee and staff data and reuses 
 Why would you want to enter all that data into several systems when Campus Soft will do it for you?
 </p>
 
-<a class="btn btn-default" href="/" role="button">{{ trans('kotoba::button.view') }}&nbsp;{{ Lang::choice('kotoba::general.detail', 2) }}&nbsp;&raquo;</a>
+<a class="btn btn-default" href="/" role="button">{{ trans('core::button.view') }}&nbsp;{{ Lang::choice('core::general.detail', 2) }}&nbsp;&raquo;</a>
 
 </article>
 </div>
@@ -62,7 +62,7 @@ Set up your Personal Development programs with Campus Soft and you'll be able to
 It sounds complicated but trust us, it's not!
 </p>
 
-<a class="btn btn-default" href="/" role="button">{{ trans('kotoba::button.view') }}&nbsp;{{ Lang::choice('kotoba::general.detail', 2) }}&nbsp;&raquo;</a>
+<a class="btn btn-default" href="/" role="button">{{ trans('core::button.view') }}&nbsp;{{ Lang::choice('core::general.detail', 2) }}&nbsp;&raquo;</a>
 
 </article>
 </div>
@@ -78,7 +78,7 @@ Shouldn't your employees and staff be able to login and see their assets and tic
 Campus Soft has taken care of this for you.
 </p>
 
-<a class="btn btn-default" href="/" role="button">{{ trans('kotoba::button.view') }}&nbsp;{{ Lang::choice('kotoba::general.detail', 2) }}&nbsp;&raquo;</a>
+<a class="btn btn-default" href="/" role="button">{{ trans('core::button.view') }}&nbsp;{{ Lang::choice('core::general.detail', 2) }}&nbsp;&raquo;</a>
 
 </article>
 </div>
@@ -94,7 +94,7 @@ However, obviously, we have several more modules under way and several more plan
 We will even design a module just for your campus.
 </p>
 
-<a class="btn btn-default" href="/" role="button">{{ trans('kotoba::button.view') }}&nbsp;{{ Lang::choice('kotoba::general.detail', 2) }}&nbsp;&raquo;</a>
+<a class="btn btn-default" href="/" role="button">{{ trans('core::button.view') }}&nbsp;{{ Lang::choice('core::general.detail', 2) }}&nbsp;&raquo;</a>
 
 </article>
 </div>

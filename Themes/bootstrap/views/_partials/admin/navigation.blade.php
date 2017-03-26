@@ -14,7 +14,7 @@
             </a>
             <a class="navbar-brand" href="/admin">
                 <i class="fa fa-dashboard fa-lg"></i>
-                {{ trans('kotoba::cms.dashboard') }}
+                {{ trans('core::cms.dashboard') }}
             </a>
         </div>
 
@@ -45,7 +45,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Lang::choice('kotoba::general.setting', 2) }} <span class="caret"></span>
+                            {{ Lang::choice('core::general.setting', 2) }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -58,7 +58,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Lang::choice('kotoba::general.mail', 1) }} <span class="caret"></span>
+                            {{ Lang::choice('core::general.mail', 1) }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
@@ -75,7 +75,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                    aria-expanded="false">
-                                    {{ Lang::choice('kotoba::hr.legal', 1) }} <span class="caret"></span>
+                                    {{ Lang::choice('core::hr.legal', 1) }} <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
@@ -93,7 +93,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
-                                {{ Lang::choice('kotoba::hr.school', 1) }} <span class="caret"></span>
+                                {{ Lang::choice('core::hr.school', 1) }} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
@@ -110,7 +110,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
-                                {{ trans('kotoba::hr.campus') }} <span class="caret"></span>
+                                {{ trans('core::hr.campus') }} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
@@ -127,7 +127,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
-                                {{ Lang::choice('kotoba::hr.hr', 1) }} <span class="caret"></span>
+                                {{ Lang::choice('core::hr.hr', 1) }} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
@@ -144,7 +144,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
-                                {{ trans('kotoba::cms.cms') }} <span class="caret"></span>
+                                {{ trans('core::cms.cms') }} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
@@ -160,7 +160,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
-                                {{ trans('kotoba::general.support') }} <span class="caret"></span>
+                                {{ trans('core::general.support') }} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
@@ -176,7 +176,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
-                                {{ Lang::choice('kotoba::shop.asset', 1) }} <span class="caret"></span>
+                                {{ Lang::choice('core::shop.asset', 1) }} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>

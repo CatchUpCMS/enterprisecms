@@ -14,7 +14,7 @@ However, here at Campus Soft we keep rethinking and redoing our system because i
 We want you to keep coming back to use it.
 </p>
 
-<a class="btn btn-default" href="/" role="button">{{ trans('kotoba::button.view') }}&nbsp;{{ Lang::choice('kotoba::general.detail', 2) }}&nbsp;&raquo;</a>
+<a class="btn btn-default" href="/" role="button">{{ trans('core::button.view') }}&nbsp;{{ Lang::choice('core::general.detail', 2) }}&nbsp;&raquo;</a>
 
 </article>
 </div>
@@ -31,7 +31,7 @@ Here at Campus Soft, although we do realize that choosing the right tool for the
 However, we have enough faith in our product that we want you to use it from the first interaction!
 </p>
 
-<a class="btn btn-default" href="/" role="button">{{ trans('kotoba::button.view') }}&nbsp;{{ Lang::choice('kotoba::general.detail', 2) }}&nbsp;&raquo;</a>
+<a class="btn btn-default" href="/" role="button">{{ trans('core::button.view') }}&nbsp;{{ Lang::choice('core::general.detail', 2) }}&nbsp;&raquo;</a>
 
 </article>
 </div>
@@ -47,7 +47,7 @@ The framework has not only become world famous but has brought back attention to
 Campus Soft is also an Arkansas company that tries to take advantage of other Arkansas technologies.
 </p>
 
-<a class="btn btn-default" href="/" role="button">{{ trans('kotoba::button.view') }}&nbsp;{{ Lang::choice('kotoba::general.detail', 2) }}&nbsp;&raquo;</a>
+<a class="btn btn-default" href="/" role="button">{{ trans('core::button.view') }}&nbsp;{{ Lang::choice('core::general.detail', 2) }}&nbsp;&raquo;</a>
 
 </article>
 </div>

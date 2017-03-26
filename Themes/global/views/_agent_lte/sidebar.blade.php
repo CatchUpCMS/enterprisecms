@@ -4,7 +4,7 @@
 
 <ul id="side-bar" class="sidebar-menu">
 	@yield('sidebar')
-	<li class="header">{!! trans('kotoba::helpdesk.Tickets') !!}</li>
+	<li class="header">{!! trans('core::helpdesk.Tickets') !!}</li>
 
 <?php
 
@@ -68,34 +68,34 @@ $overdue_ticket = 0;
 
 <li @yield('inbox')>
 <a href="{{ url('agent/ticket/inbox') }}" id="load-inbox">
-<i class="fa fa-envelope"></i> <span>{!! trans('kotoba::helpdesk.inbox') !!}</span> <small class="label pull-right bg-green"><?php echo count($tickets); ?></small>
+<i class="fa fa-envelope"></i> <span>{!! trans('core::helpdesk.inbox') !!}</span> <small class="label pull-right bg-green"><?php echo count($tickets); ?></small>
 </a>
 </li>
 <li @yield('myticket')>
 <a href="{{ url('agent/ticket/myticket') }}" id="load-myticket">
-<i class="fa fa-user"></i> <span>{!! trans('kotoba::helpdesk.my_tickets') !!} </span>
+<i class="fa fa-user"></i> <span>{!! trans('core::helpdesk.my_tickets') !!} </span>
 <small class="label pull-right bg-green">{{count($myticket) }}</small>
 </a>
 </li>
 <li @yield('unassigned')>
 <a href="{{ url('agent/unassigned') }}" id="load-unassigned">
-<i class="fa fa-th"></i> <span>{!! trans('kotoba::helpdesk.unassigned') !!}</span>
+<i class="fa fa-th"></i> <span>{!! trans('core::helpdesk.unassigned') !!}</span>
 <small class="label pull-right bg-green">{{count($unassigned) }}</small>
 </a>
 </li>
 <li @yield('overdue')>
 <a href="{{ url('agent/ticket/overdue') }}" id="load-unassigned">
-<i class="fa fa-calendar-times-o"></i> <span>{!! trans('kotoba::helpdesk.overdue') !!}</span>
+<i class="fa fa-calendar-times-o"></i> <span>{!! trans('core::helpdesk.overdue') !!}</span>
 <small class="label pull-right bg-green">{{$overdue_ticket}}</small>
 </a>
 </li>
 <li @yield('trash')>
 <a href="{{ url('agent/trash') }}">
-<i class="fa fa-trash-o"></i> <span>{!! trans('kotoba::helpdesk.trash') !!}</span>
+<i class="fa fa-trash-o"></i> <span>{!! trans('core::helpdesk.trash') !!}</span>
 <small class="label pull-right bg-green">{{count($deleted) }}</small>
 </a>
 </li>
-<li class="header">{!! trans('kotoba::helpdesk.Departments') !!}</li>
+<li class="header">{!! trans('core::helpdesk.Departments') !!}</li>
 
 <?php
 $depts = App\Modules\Support\Http\Models\HelpDesk\Agent\Department::all();
@@ -121,9 +121,9 @@ if (Shinobi::is('admin')) {
 <li class="treeview  @yield('{!! $dept->name !!}')">
 	<a href="#"><i class="fa fa-folder-open"></i> <span>{!! $dept->name !!}</span> <i class="fa fa-angle-left pull-right"></i></a>
 	<ul class="treeview-menu">
-		<li><a href="{!! url::route('dept.open.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('kotoba::helpdesk.open') !!}<small class="label pull-right bg-green">{!! $open !!}</small></a></li>
-		<li><a href="{!! url::route('dept.inprogress.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('kotoba::helpdesk.inprogress') !!}<small class="label pull-right bg-green">{!! $underprocess !!}</small></a></li>
-		<li><a href="{!! url::route('dept.closed.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('kotoba::helpdesk.closed') !!}<small class="label pull-right bg-green">{!! $closed !!}</small></a></li>
+		<li><a href="{!! url::route('dept.open.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('core::helpdesk.open') !!}<small class="label pull-right bg-green">{!! $open !!}</small></a></li>
+		<li><a href="{!! url::route('dept.inprogress.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('core::helpdesk.inprogress') !!}<small class="label pull-right bg-green">{!! $underprocess !!}</small></a></li>
+		<li><a href="{!! url::route('dept.closed.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('core::helpdesk.closed') !!}<small class="label pull-right bg-green">{!! $closed !!}</small></a></li>
 	</ul>
 </li>
 
@@ -135,9 +135,9 @@ if (Shinobi::is('agent') && Auth::user()->primary_dpt == $dept->id) {
 <li class="treeview">
 	<a href="#"><i class="fa fa-folder-open"></i> <span>{!! $dept->name !!}</span> <i class="fa fa-angle-left pull-right"></i></a>
 	<ul class="treeview-menu">
-		<li><a href="{!! url::route('dept.open.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('kotoba::helpdesk.open') !!}<small class="label pull-right bg-green">{!! $open !!}</small></a></li>
-		<li><a href="{!! url::route('dept.inprogress.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('kotoba::helpdesk.inprogress') !!}<small class="label pull-right bg-green">{!! $underprocess !!}</small></a></li>
-		<li><a href="{!! url::route('dept.closed.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('kotoba::helpdesk.closed') !!}<small class="label pull-right bg-green">{!! $closed !!}</small></a></li>
+		<li><a href="{!! url::route('dept.open.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('core::helpdesk.open') !!}<small class="label pull-right bg-green">{!! $open !!}</small></a></li>
+		<li><a href="{!! url::route('dept.inprogress.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('core::helpdesk.inprogress') !!}<small class="label pull-right bg-green">{!! $underprocess !!}</small></a></li>
+		<li><a href="{!! url::route('dept.closed.ticket',$dept->name) !!}"><i class="fa fa-circle-o"></i>{!! trans('core::helpdesk.closed') !!}<small class="label pull-right bg-green">{!! $closed !!}</small></a></li>
 	</ul>
 </li>
 

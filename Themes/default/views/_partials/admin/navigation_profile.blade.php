@@ -5,21 +5,19 @@
     <ul class="dropdown-menu" role="menu">
         <li>
             <a href="/profiles/{{ Auth::user()->id }}">
-                {{ Lang::choice('kotoba::account.profile', 1) }}
+                {{ Lang::choice('core::account.profile', 1) }}
             </a>
         </li>
         <li class="divider"></li>
-        <li><a href="#">Account</a></li>
         <li><a href="#">Dashboard</a></li>
-        <li class="nav-divider"></li>
-        <li><a href="#">Logout</a></li>
-        @if (Auth::user()->can('manage_admin'))
+        {{--@if (Auth::user()->can('manage-admin'))
             @include('partials.nav_menu', ['items'=> $menu_navAdmin->roots()])
             <li class="divider"></li>
-        @endif
+        @endif--}}
+        <li class="nav-divider"></li>
         <li>
             <a href="/auth/logout">
-                {{ trans('kotoba::auth.log_out') }}
+                {{ trans('core::auth.log_out') }}
             </a>
         </li>
     </ul>

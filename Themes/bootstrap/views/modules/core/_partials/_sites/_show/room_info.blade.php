@@ -5,20 +5,20 @@
 
 @if (count($site->rooms))
 <h3>
-	{{ Lang::choice('kotoba::general.room', 2) }}
+	{{ Lang::choice('core::general.room', 2) }}
 </h3>
 
 <div class="row">
 <table id="table_rooms" class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>{{ trans("kotoba::table.name") }}</th>
-			<th>{{ trans("kotoba::table.description") }}</th>
-			<th>{{ trans("kotoba::table.barcode") }}</th>
-			<th>{{ Lang::choice('kotoba::table.user', 1) }}</th>
-			<th>{{ trans("kotoba::table.status") }}</th>
+			<th>{{ trans("core::table.name") }}</th>
+			<th>{{ trans("core::table.description") }}</th>
+			<th>{{ trans("core::table.barcode") }}</th>
+			<th>{{ Lang::choice('core::table.user', 1) }}</th>
+			<th>{{ trans("core::table.status") }}</th>
 
-			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
+			<th>{{ Lang::choice('core::table.action', 2) }}</th>
 		</tr>
 	</thead>
 
@@ -40,14 +40,14 @@
 			</td>
 			<td>
 				{{-- $room->present()->status($room->status_id) --}}
-				{{ $room->status_id == 1 ? trans('kotoba::general.enabled') : trans('kotoba::general.disabled') }}
+				{{ $room->status_id == 1 ? trans('core::general.enabled') : trans('core::general.disabled') }}
 			</td>
 			<td>
 				<a href="{{ URL::to('/admin/rooms/' . $room->id . '/edit' ) }}" class="btn btn-success" >
-					<span class="glyphicon glyphicon-pencil"></span>  {{ trans("kotoba::button.edit") }}
+					<span class="glyphicon glyphicon-pencil"></span>  {{ trans("core::button.edit") }}
 				</a>
 				<a href="{{ URL::to('/admin/rooms/' . $room->id ) }}" class="btn btn-info" >
-					<span class="glyphicon glyphicon-search"></span>  {{ trans("kotoba::button.view") }}
+					<span class="glyphicon glyphicon-search"></span>  {{ trans("core::button.view") }}
 				</a>
 			</td>
 		</tr>
@@ -60,7 +60,7 @@
 
 @else
 	<div class="alert alert-info">
-		{{ trans('kotoba::general.no_records') }}
+		{{ trans('core::general.no_records') }}
 	</div>
 @endif
 

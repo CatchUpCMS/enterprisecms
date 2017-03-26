@@ -10,7 +10,7 @@
 	</button>
 	<a class="navbar-brand" href="/">
 	<i class="fa fa-dashboard fa-lg"></i>
-		{{ trans('kotoba::general.dashboard') }}
+		{{ trans('core::general.dashboard') }}
 	</a>
 </div>
 
@@ -18,8 +18,8 @@
 
 	<ul class="nav navbar-nav navbar-right">
 		@if (Auth::guest())
-			<li><a href="/auth/login">{{ trans('kotoba::auth.log_in') }}</a></li>
-			<li><a href="/auth/register">{{ trans('kotoba::auth.register') }}</a></li>
+			<li><a href="/auth/login">{{ trans('core::auth.log_in') }}</a></li>
+			<li><a href="/auth/register">{{ trans('core::auth.register') }}</a></li>
 		@else
 			<li>
 				@if (Auth::user()->avatar != null)
@@ -43,13 +43,13 @@
 				<ul class="dropdown-menu" role="menu">
 					<li>
 						<a href="/customer/{{ Auth::user()->id }}">
-							{{ Lang::choice('kotoba::account.profile', 1) }}
+							{{ Lang::choice('core::account.profile', 1) }}
 						</a>
 					</li>
 				<li class="divider"></li>
 					<li>
 						<a href="/auth/logout">
-							{{ trans('kotoba::auth.log_out') }}
+							{{ trans('core::auth.log_out') }}
 						</a>
 					</li>
 				</ul>

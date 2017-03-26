@@ -38,7 +38,7 @@
 					{!! $article->translate($lang)->summary !!}
 				</p>
 				<p>
-					<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('kotoba::cms.more') }}</a>
+					<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('core::cms.more') }}</a>
 				</p>
 --}}
 			</div>

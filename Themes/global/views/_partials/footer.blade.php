@@ -5,9 +5,9 @@
 
 		<div class="padding-lg">
 			<div class="copyright text-center">
-				@if (Auth::user() && Auth::user()->can('manage_admin'))
+				@if (Auth::user() && Auth::user()->can('manage-admin'))
 					<a href="/admin">
-					{{ trans('kotoba::general.administration') }}
+					{{ trans('core::general.administration') }}
 					</a>
 					&nbsp;&copy;&nbsp;2015-2016
 				@else

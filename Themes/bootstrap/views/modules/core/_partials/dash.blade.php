@@ -1,6 +1,6 @@
 <h2>
 	<i class="fa fa-keyboard-o fa-lg"></i>
-	{{ Lang::choice('kotoba::shop.asset', 2) }}
+	{{ Lang::choice('core::shop.asset', 2) }}
 	<hr>
 </h2>
 
@@ -9,7 +9,7 @@
 
 	<dl class="dl-horizontal">
 		<dt>
-			{{ trans('kotoba::general.all') }}
+			{{ trans('core::general.all') }}
 		</dt>
 		<dd>
 			<a href="{{ URL::to('/admin/asset') }}">{{ $total_assets }}</a>
@@ -21,7 +21,7 @@
 
 	<dl class="dl-horizontal">
 		<dt>
-			{{ date("Y") }}&nbsp;{{ Lang::choice('kotoba::general.year', 1) }}
+			{{ date("Y") }}&nbsp;{{ Lang::choice('core::general.year', 1) }}
 		</dt>
 		<dd>
 			<a href="{{ URL::to('/admin/asset') }}">{{ $total_assets_year }}</a>

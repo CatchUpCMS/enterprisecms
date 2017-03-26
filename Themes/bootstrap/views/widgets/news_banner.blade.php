@@ -41,7 +41,7 @@
 					{!! $article->translate($lang)->summary !!}
 				</p>
 				<p>
-					<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('kotoba::cms.more') }}</a>
+					<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('core::cms.more') }}</a>
 				</p>
 			</div>
 
@@ -53,11 +53,11 @@
 
 	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		<span class="sr-only">{{ trans('kotoba::button.previous') }}</span>
+		<span class="sr-only">{{ trans('core::button.previous') }}</span>
 	</a>
 	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
 		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		<span class="sr-only">{{ trans('kotoba::button.next') }}</span>
+		<span class="sr-only">{{ trans('core::button.next') }}</span>
 	</a>
 
 

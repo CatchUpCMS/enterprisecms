@@ -8,7 +8,7 @@
 	<li>
 		<a href="{!! url('/') !!}">
 			<i class="fa fa-home fa-fw"></i>
-			{!! trans('kotoba::general.home') !!}
+			{!! trans('core::general.home') !!}
 		</a>
 	</li>
 

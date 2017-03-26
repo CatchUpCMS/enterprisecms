@@ -73,7 +73,7 @@ $(function(){
 @if ( count($page->documents) )
 	<div class="row">
 		<h3>
-			{{ Lang::choice('kotoba::files.file', 2) }}
+			{{ Lang::choice('core::files.file', 2) }}
 		</h3>
 		<hr>
 	</div>
@@ -82,8 +82,8 @@ $(function(){
 	<table id="table" class="table table-striped table-hover">
 		<thead>
 			<tr>
-				<th>{{ Lang::choice('kotoba::table.document', 1) }}</th>
-				<th>{{ trans('kotoba::table.updated') }}</th>
+				<th>{{ Lang::choice('core::table.document', 1) }}</th>
+				<th>{{ trans('core::table.updated') }}</th>
 			</tr>
 		</thead>
 		<tbody>

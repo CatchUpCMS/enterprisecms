@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::general.status', 2) }} :: @parent
+{{ Lang::choice('core::general.status', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -23,13 +23,13 @@
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/admin/statuses" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
+	<a href="/admin/statuses" class="btn btn-default" title="{{ trans('core::button.back') }}">
 		<i class="fa fa-chevron-left fa-fw"></i>
-		{{ trans('kotoba::button.back') }}
+		{{ trans('core::button.back') }}
 	</a>
 	</p>
 	<i class="fa fa-edit fa-lg"></i>
-	{{ trans('kotoba::general.command.edit') }}
+	{{ trans('core::general.command.edit') }}
 	<hr>
 </h1>
 </div>
@@ -60,12 +60,12 @@
 	<div role="tabpanel" class="tab-pane padding fade @if ($language->locale == $lang)in active @endif" id="lang_{{{ $language->id }}}">
 
 			<div class="form-group">
-				<label for="title">{{ trans('kotoba::account.name') }}</label>
+				<label for="title">{{ trans('core::account.name') }}</label>
 				<input type="text" class="form-control" name="{{ 'name_'. $language->id }}" id="{{ 'name_'. $language->id }}" value="{{  $status->translate($language->locale)->name }}">
 			</div>
 
 			<div class="form-group">
-				<label for="title">{{ trans('kotoba::general.description') }}</label>
+				<label for="title">{{ trans('core::general.description') }}</label>
 				<input type="text" class="form-control" name="{{ 'description_'. $language->id }}" id="{{ 'description_'. $language->id }}" value="{{  $status->translate($language->locale)->description }}">
 			</div>
 
@@ -82,7 +82,7 @@
 
 <div class="row">
 <div class="col-sm-12">
-	<input class="btn btn-success btn-block" type="submit" value="{{ trans('kotoba::button.save') }}">
+	<input class="btn btn-success btn-block" type="submit" value="{{ trans('core::button.save') }}">
 </div>
 </div>
 
@@ -90,22 +90,22 @@
 
 <div class="row">
 <div class="col-sm-6">
-	<a href="/admin/statuses" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
+	<a href="/admin/statuses" class="btn btn-default btn-block" title="{{ trans('core::button.cancel') }}">
 		<i class="fa fa-times fa-fw"></i>
-		{{ trans('kotoba::button.cancel') }}
+		{{ trans('core::button.cancel') }}
 	</a>
 </div>
 
 <div class="col-sm-6">
-	<input class="btn btn-default btn-block" type="reset" value="{{ trans('kotoba::button.reset') }}">
+	<input class="btn btn-default btn-block" type="reset" value="{{ trans('core::button.reset') }}">
 </div>
 
 {{--
 <div class="col-sm-4">
 <!-- Button trigger modal -->
-	<a data-toggle="modal" data-target="#myModal" class="btn btn-default btn-block" title="{{ trans('kotoba::button.delete') }}">
+	<a data-toggle="modal" data-target="#myModal" class="btn btn-default btn-block" title="{{ trans('core::button.delete') }}">
 		<i class="fa fa-trash-o fa-fw"></i>
-		{{ trans('kotoba::general.command.delete') }}
+		{{ trans('core::general.command.delete') }}
 	</a>
 </div>
 --}}

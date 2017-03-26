@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::general.menu', 2) }} :: @parent
+{{ Lang::choice('core::general.menu', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -28,13 +28,13 @@
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/admin/menulinks/{{ $return_id }}" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
+	<a href="/admin/menulinks/{{ $return_id }}" class="btn btn-default" title="{{ trans('core::button.back') }}">
 		<i class="fa fa-chevron-left fa-fw"></i>
-		{{ trans('kotoba::button.back') }}
+		{{ trans('core::button.back') }}
 	</a>
 	</p>
 	<i class="fa fa-edit fa-lg"></i>
-	{{ trans('kotoba::general.command.create') }}
+	{{ trans('core::general.command.create') }}
 	<hr>
 </h1>
 </div>
@@ -66,14 +66,14 @@
 	<div role="tabpanel" class="tab-pane padding fade @if ($language->locale == $lang)in active @endif" id="lang_{{{ $language->id }}}">
 
 			<div class="form-group">
-				<label class="col-sm-1 control-label">{{ trans('kotoba::general.title') }}</label>
+				<label class="col-sm-1 control-label">{{ trans('core::general.title') }}</label>
 				<div class="col-sm-11">
 					<input type="text" class="form-control" name="{{ 'title_'. $language->id }}" id="{{ 'title_'. $language->id }}" autofocus="autofocus">
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label class="col-sm-1 control-label">{{ trans('kotoba::general.url') }}</label>
+				<label class="col-sm-1 control-label">{{ trans('core::general.url') }}</label>
 				<div class="col-sm-11">
 					<input type="text" class="form-control" name="{{ 'url_'. $language->id }}" id="{{ 'url_'. $language->id }}" >
 				</div>
@@ -81,17 +81,17 @@
 
 			<div class="form-group">
 				<div class="checkbox">
-						{{ trans('kotoba::general.enabled') }}
+						{{ trans('core::general.enabled') }}
 						&nbsp;
 						<input type="radio" name="{{ 'status_'. $language->id }}"  name="{{ 'status_'. $language->id }}" value="1">
 						&nbsp;
-						{{ trans('kotoba::general.disabled') }}
+						{{ trans('core::general.disabled') }}
 						&nbsp;
 						<input type="radio" name="{{ 'status_'. $language->id }}"  name="{{ 'status_'. $language->id }}" value="1">
 {{--
 						<input type="radio" name="status"  name="status" value="1">
 						&nbsp;
-						{{ trans('kotoba::general.disabled') }}
+						{{ trans('core::general.disabled') }}
 						&nbsp;
 						<input type="radio" name="status"  name="status" value="1">
 --}}
@@ -110,7 +110,7 @@
 	<div class="form-group">
 	<div class="input-group">
 		<span class="input-group-addon"><i class="fa fa-sort-numeric-asc fa-fw"></i></span>
-			<input type="text" id="position" name="position" placeholder="{{ trans('kotoba::cms.position') }}" class="form-control">
+			<input type="text" id="position" name="position" placeholder="{{ trans('core::cms.position') }}" class="form-control">
 	</div>
 	</div>
 
@@ -118,13 +118,13 @@
 	<div class="form-group">
 	<div class="input-group">
 		<span class="input-group-addon"><i class="fa fa-css3 fa-fw"></i></span>
-			<input type="text" id="class" name="class" placeholder="{{ trans('kotoba::general.class') }}" class="form-control">
+			<input type="text" id="class" name="class" placeholder="{{ trans('core::general.class') }}" class="form-control">
 	</div>
 	</div>
 
 
 <div class="form-group padding-bottom-xl">
-	<label for="inputJobTitle1" class="col-sm-2 control-label">{{ Lang::choice('kotoba::cms.menu', 2) }}:</label>
+	<label for="inputJobTitle1" class="col-sm-2 control-label">{{ Lang::choice('core::cms.menu', 2) }}:</label>
 	<div class="col-sm-10">
 		{!!
 			Form::select(
@@ -147,7 +147,7 @@
 
 <div class="row">
 <div class="col-sm-12">
-	<input class="btn btn-success btn-block" type="submit" value="{{ trans('kotoba::button.save') }}">
+	<input class="btn btn-success btn-block" type="submit" value="{{ trans('core::button.save') }}">
 </div>
 </div>
 
@@ -155,14 +155,14 @@
 
 <div class="row">
 <div class="col-sm-6">
-	<a href="/admin/menulinks/{{ $return_id }}" class="btn btn-default btn-block" title="{{ trans('kotoba::button.cancel') }}">
+	<a href="/admin/menulinks/{{ $return_id }}" class="btn btn-default btn-block" title="{{ trans('core::button.cancel') }}">
 		<i class="fa fa-times fa-fw"></i>
-		{{ trans('kotoba::button.cancel') }}
+		{{ trans('core::button.cancel') }}
 	</a>
 </div>
 
 <div class="col-sm-6">
-	<input class="btn btn-default btn-block" type="reset" value="{{ trans('kotoba::button.reset') }}">
+	<input class="btn btn-default btn-block" type="reset" value="{{ trans('core::button.reset') }}">
 </div>
 </div>
 

@@ -8,23 +8,23 @@
 
                 <ul class="footer_links">
 
-                    @if ( Auth::user()->can('manage_admin') )
+                    @if ( Auth::user()->can('manage-admin') )
                         <li>
                             <a class="footer_links" href="/admin">
-                                {{ trans('kotoba::general.dashboard') }}
+                                {{ trans('core::general.dashboard') }}
                             </a>
                         </li>
                     @endif
                     @if ( Auth::user()->can('manage_support') )
                         <li>
                             <a class="footer_links" href="/agent/dashboard">
-                                {{ trans('kotoba::helpdesk.agent_panel') }}
+                                {{ trans('core::helpdesk.agent_panel') }}
                             </a>
                         </li>
                     @endif
                     <li>
                         <a class="footer_links" href="/helpdesk">
-                            {{ trans('kotoba::helpdesk.helpdesk') }}
+                            {{ trans('core::helpdesk.helpdesk') }}
                         </a>
                     </li>
                     {{--
@@ -44,7 +44,7 @@
 
             <div class="col-sm-2">
                 <h4>
-                    {{ trans('kotoba::button.log_in') }}
+                    {{ trans('core::button.log_in') }}
                 </h4>
             </div>
 
@@ -53,12 +53,12 @@
                     {!! csrf_field() !!}
                     <fieldset>
                         <input type="email" class="field bottom-email" name="email" tabindex="1" value=""
-                               placeholder="{{ trans('kotoba::account.email') }}">
+                               placeholder="{{ trans('core::account.email') }}">
                         <br>
                         <input type="password" class="field bottom-email" name="password" tabindex="2" value=""
-                               placeholder="{{ trans('kotoba::auth.password') }}">
+                               placeholder="{{ trans('core::auth.password') }}">
                         <button type="submit" class="btn btn-default" tabindex="0">
-                            {{ trans('kotoba::button.log_in') }}
+                            {{ trans('core::button.log_in') }}
                         </button>
                     </fieldset>
                 </form>

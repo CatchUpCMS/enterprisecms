@@ -3,25 +3,25 @@
 	<li role="presentation" class="active">
 		<a href="#news" aria-controls="news" role="tab" data-toggle="tab">
 			<i class="fa fa-news fa-fw"></i>
-			{{ trans('kotoba::cms.news') }}
+			{{ trans('core::cms.news') }}
 		</a>
 	</li>
 	<li role="presentation">
 		<a href="#tweets" aria-controls="tweets" role="tab" data-toggle="tab">
 			<i class="fa fa-twitter fa-fw"></i>
-			{{ trans('kotoba::general.twitter') }}
+			{{ trans('core::general.twitter') }}
 		</a>
 	</li>
 	<li role="presentation">
 		<a href="#grams" aria-controls="grams" role="tab" data-toggle="tab">
 			<i class="fa fa-instagram fa-fw"></i>
-			{{ trans('kotoba::general.instagram') }}
+			{{ trans('core::general.instagram') }}
 		</a>
 	</li>
 	<li role="presentation">
 		<a href="#facebook" aria-controls="facebook" role="tab" data-toggle="tab">
 			<i class="fa fa-facebook fa-fw"></i>
-			{{ trans('kotoba::general.facebook') }}
+			{{ trans('core::general.facebook') }}
 		</a>
 	</li>
 </ul>

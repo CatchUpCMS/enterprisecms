@@ -57,7 +57,7 @@
 		Campus Soft was created by a teacher with vast experience in several educational institutions.
 		That experience and understanding is the foundation for what Campus Soft achieves while at the same time, keeping it easy to use.
 		</p>
-		<a class="btn btn-default" href="/" role="button">Learn&nbsp;{{ trans('kotoba::button.more') }}&nbsp;&raquo;</a>
+		<a class="btn btn-default" href="/" role="button">Learn&nbsp;{{ trans('core::button.more') }}&nbsp;&raquo;</a>
 
 	</article>
 </div>
@@ -72,7 +72,7 @@
 		Why would you want to store your data across several systems when it can be stored in one?
 		We at Campus Soft thought the same thing!
 		</p>
-		<a class="btn btn-default" href="/" role="button">Learn&nbsp;{{ trans('kotoba::button.more') }}&nbsp;&raquo;</a>
+		<a class="btn btn-default" href="/" role="button">Learn&nbsp;{{ trans('core::button.more') }}&nbsp;&raquo;</a>
 
 	</article>
 </div>

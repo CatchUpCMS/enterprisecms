@@ -1,7 +1,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h3 class="panel-title">
-			{{ trans('kotoba::general.information') }}:
+			{{ trans('core::general.information') }}:
 		</h3>
 	</div><!-- ./panel-heading -->
 	<div class="panel-body">
@@ -10,7 +10,7 @@
 
 			<dl class="dl-horizontal">
 				<dt>
-					{{ trans('kotoba::account.address') }}:
+					{{ trans('core::account.address') }}:
 				</dt>
 				<dd>
 					{{ $site->address }}
@@ -21,7 +21,7 @@
 
 			<dl class="dl-horizontal">
 				<dt>
-					{{ trans('kotoba::account.website') }}:
+					{{ trans('core::account.website') }}:
 				</dt>
 				<dd>
 					<a href="{{ $site->website }}">{{ $site->website }}</a>
@@ -30,7 +30,7 @@
 
 			<dl class="dl-horizontal">
 				<dt>
-					{{ trans('kotoba::account.primary_phone') }}:
+					{{ trans('core::account.primary_phone') }}:
 				</dt>
 				<dd>
 					{{ $site->phone_1 }}
@@ -39,7 +39,7 @@
 
 			<dl class="dl-horizontal">
 				<dt>
-					{{ trans('kotoba::account.secondary_phone') }}:
+					{{ trans('core::account.secondary_phone') }}:
 				</dt>
 				<dd>
 					{{ $site->phone_2 }}
@@ -51,7 +51,7 @@
 
 			<dl class="dl-horizontal">
 				<dt>
-					{{ trans('kotoba::general.contact') }}:
+					{{ trans('core::general.contact') }}:
 				</dt>
 				<dd>
 					{{-- $site->user_id --}}
@@ -61,7 +61,7 @@
 
 			<dl class="dl-horizontal">
 				<dt>
-					{{ Lang::choice('kotoba::hr.division', 1) }}:
+					{{ Lang::choice('core::hr.division', 1) }}:
 				</dt>
 				<dd>
 					{{-- $site->division_id --}}
@@ -71,7 +71,7 @@
 
 			<dl class="dl-horizontal">
 				<dt>
-					{{ trans('kotoba::account.email') }}:
+					{{ trans('core::account.email') }}:
 				</dt>
 				<dd>
 					{{ $site->email }}
@@ -103,7 +103,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h3 class="panel-title">
-			{{ trans('kotoba::general.introduction') }}
+			{{ trans('core::general.introduction') }}
 		</h3>
 	</div>
 	<div class="panel-body">

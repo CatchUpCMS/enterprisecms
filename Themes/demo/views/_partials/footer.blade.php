@@ -30,17 +30,17 @@
         <div class="col-sm-4">
 
 
-            @if (Auth::user() && Auth::user()->can('manage_admin'))
+            @if (Auth::user() && Auth::user()->can('manage-admin'))
 
                 <h1>
-                    {{ trans('kotoba::general.information') }}
+                    {{ trans('core::general.information') }}
                 </h1>
                 <hr>
 
                 <div class="row">
                     </h3>
                     <a class="footer_links" href="/admin">
-                        {{ trans('kotoba::general.administration') }}
+                        {{ trans('core::general.administration') }}
                     </a>
                     </h3>
                 </div><!--./row-->
@@ -55,7 +55,7 @@
             @else
 
                 <h1>
-                    {{ trans('kotoba::button.log_in') }}
+                    {{ trans('core::button.log_in') }}
                 </h1>
                 <hr>
 
@@ -63,7 +63,7 @@
                     {!! csrf_field() !!}
 
                     <div class="form-group">
-                        <label class="col-md-3 control-label">{{ trans('kotoba::account.email') }}</label>
+                        <label class="col-md-3 control-label">{{ trans('core::account.email') }}</label>
                         <div class="col-md-9">
                             <input type="email" class="form-control" name="email" value="{{ old('email') }}"
                                    tabindex="1">
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-3 control-label">{{ trans('kotoba::auth.password') }}</label>
+                        <label class="col-md-3 control-label">{{ trans('core::auth.password') }}</label>
                         <div class="col-md-9">
                             <input type="password" class="form-control" name="password" tabindex="2">
                         </div>
@@ -82,7 +82,7 @@
                         <div class="col-md-9">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="remember"> {{ trans('kotoba::auth.remember_me') }}
+                                    <input type="checkbox" name="remember"> {{ trans('core::auth.remember_me') }}
                                 </label>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                         <label class="col-md-3 control-label"></label>
                         <div class="col-md-9">
                             <button type="submit" class="btn btn-success btn-block" tabindex="0">
-                                {{ trans('kotoba::button.log_in') }}
+                                {{ trans('core::button.log_in') }}
                             </button>
                         </div>
                     </div>
@@ -110,10 +110,10 @@
                 ]) !!}
 
                 <div class="form-group">
-                    <label class="col-md-3 control-label">{{ Lang::choice('kotoba::general.search', 1) }}</label>
+                    <label class="col-md-3 control-label">{{ Lang::choice('core::general.search', 1) }}</label>
                     <div class="col-md-9">
                         <input type="text" id="search_terms" name="search_terms"
-                               placeholder="{{ trans('kotoba::general.command.enter') }} {{ Lang::choice('kotoba::general.search', 1) }}"
+                               placeholder="{{ trans('core::general.command.enter') }} {{ Lang::choice('core::general.search', 1) }}"
                                class="form-control">
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                     <label class="col-md-3 control-label"></label>
                     <div class="col-md-9">
                         <button type="submit" class="btn btn-success btn-block" tabindex="0">
-                            {{ trans('kotoba::button.search') }}
+                            {{ trans('core::button.search') }}
                         </button>
                     </div>
                 </div>
@@ -137,9 +137,9 @@
 
         <div class="padding-lg">
             <div class="copyright text-center">
-                @if (Auth::user() && Auth::user()->can('manage_admin'))
+                @if (Auth::user() && Auth::user()->can('manage-admin'))
                     <a href="/admin">
-                        {{ trans('kotoba::general.administration') }}
+                        {{ trans('core::general.administration') }}
                     </a>
                     &nbsp;&copy;&nbsp;2015-2016
                 @else

@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::cms.theme', 2) }} :: @parent
+{{ Lang::choice('core::cms.theme', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -31,7 +31,7 @@ oTable =
 <div class="row">
 <h1>
 	<i class="fa fa-gears fa-lg"></i>
-		{{ trans('kotoba::general.active') }}:&nbsp;{{ $activeTheme }}
+		{{ trans('core::general.active') }}:&nbsp;{{ $activeTheme }}
 	<hr>
 </h1>
 </div>
@@ -43,12 +43,12 @@ oTable =
 <table id="table" class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>{{ trans('kotoba::table.name') }}</th>
-			<th>{{ trans('kotoba::table.slug') }}</th>
-			<th>{{ trans('kotoba::table.author') }}</th>
-			<th>{{ trans('kotoba::table.description') }}</th>
-			<th>{{ trans('kotoba::table.version') }}</th>
-			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
+			<th>{{ trans('core::table.name') }}</th>
+			<th>{{ trans('core::table.slug') }}</th>
+			<th>{{ trans('core::table.author') }}</th>
+			<th>{{ trans('core::table.description') }}</th>
+			<th>{{ trans('core::table.version') }}</th>
+			<th>{{ Lang::choice('core::table.action', 2) }}</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -60,9 +60,9 @@ oTable =
 				<td>{{ $collection[$theme]['description'] }}</td>
 				<td>{{ $collection[$theme]['version'] }}</td>
 				<td>
-					<a href="/admin/themes/{{ $collection[$theme]['slug'] }}" class="btn btn-primary" title="{{ trans('kotoba::button.edit') }}">
+					<a href="/admin/themes/{{ $collection[$theme]['slug'] }}" class="btn btn-primary" title="{{ trans('core::button.edit') }}">
 						<i class="fa fa-pencil fa-fw"></i>
-						{{ trans('kotoba::button.edit') }}
+						{{ trans('core::button.edit') }}
 					</a>
 				</td>
 			</tr>
@@ -75,7 +75,7 @@ oTable =
 @else
 <div class="alert alert-info">
 </div>
-	{{ trans('kotoba::general.error.not_found') }}
+	{{ trans('core::general.error.not_found') }}
 @endif
 
 

@@ -5,7 +5,7 @@
 	<div class="col-sm-12">
 <h3>
 	<i class="fa fa-search fa-lg"></i>
-	{{ Lang::choice('kotoba::shop.asset', 1) }}&nbsp;{{ Lang::choice('kotoba::general.search', 1) }}
+	{{ Lang::choice('core::shop.asset', 1) }}&nbsp;{{ Lang::choice('core::general.search', 1) }}
 	<hr>
 </h3>
 </div>
@@ -22,13 +22,13 @@
 ]) !!}
 
 	<div class="form-group">
-		<input type="text" id="search_terms" name="search_terms" placeholder="{{ trans('kotoba::general.command.enter') }} {{ Lang::choice('kotoba::general.search', 1) }}" class="form-control">
+		<input type="text" id="search_terms" name="search_terms" placeholder="{{ trans('core::general.command.enter') }} {{ Lang::choice('core::general.search', 1) }}" class="form-control">
 	</div>
 
 	<hr>
 
 	<div class="row">
-		<input class="btn btn-success btn-block" type="submit" value="{{ trans('kotoba::button.search') }}">
+		<input class="btn btn-success btn-block" type="submit" value="{{ trans('core::button.search') }}">
 	</div>
 
 {!! Form::close() !!}

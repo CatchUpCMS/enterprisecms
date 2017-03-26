@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::permission.permission', 2) }} :: @parent
+{{ Lang::choice('core::permission.permission', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -71,13 +71,13 @@ oTable =
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/admin/permissions/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
+	<a href="/admin/permissions/create" class="btn btn-primary" title="{{ trans('core::button.new') }}">
 		<i class="fa fa-plus fa-fw"></i>
-		{{ trans('kotoba::button.new') }}
+		{{ trans('core::button.new') }}
 	</a>
 	</p>
 	<i class="fa fa-gavel fa-lg"></i>
-		{{ Lang::choice('kotoba::permission.permission', 2) }}
+		{{ Lang::choice('core::permission.permission', 2) }}
 	<hr>
 </h1>
 </div>
@@ -87,12 +87,12 @@ oTable =
 	<thead>
 		<tr>
 			<th></th>
-			<th>{{ trans('kotoba::table.name') }}</th>
-			<th>{{ trans('kotoba::table.slug') }}</th>
-			<th>{{ trans('kotoba::table.description') }}</th>
-			<th>{{ trans('kotoba::table.updated_at') }}</th>
+			<th>{{ trans('core::table.name') }}</th>
+			<th>{{ trans('core::table.slug') }}</th>
+			<th>{{ trans('core::table.description') }}</th>
+			<th>{{ trans('core::table.updated_at') }}</th>
 
-			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
+			<th>{{ Lang::choice('core::table.action', 2) }}</th>
 		</tr>
 	</thead>
 	<tbody></tbody>

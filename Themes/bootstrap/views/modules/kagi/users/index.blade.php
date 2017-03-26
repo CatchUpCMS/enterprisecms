@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::account.user', 2) }} :: @parent
+{{ Lang::choice('core::account.user', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -99,19 +99,19 @@ oTable =
 <h1>
 	<p class="pull-right">
 	@if ( Module::exists('jinji') )
-		<a href="/admin/employees/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
+		<a href="/admin/employees/create" class="btn btn-primary" title="{{ trans('core::button.new') }}">
 			<i class="fa fa-plus fa-fw"></i>
-			{{ trans('kotoba::button.new') }}
+			{{ trans('core::button.new') }}
 		</a>
 	@else
-		<a href="/admin/users/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
+		<a href="/admin/users/create" class="btn btn-primary" title="{{ trans('core::button.new') }}">
 			<i class="fa fa-plus fa-fw"></i>
-			{{ trans('kotoba::button.new') }}
+			{{ trans('core::button.new') }}
 		</a>
 	@endif
 	</p>
 	<i class="fa fa-users fa-lg"></i>
-		{{ Lang::choice('kotoba::account.user', 2) }}
+		{{ Lang::choice('core::account.user', 2) }}
 	<hr>
 </h1>
 </div>
@@ -121,16 +121,16 @@ oTable =
 	<thead>
 		<tr>
 			<th></th>
-			<th>{{ trans('kotoba::table.name') }}</th>
-			<th>{{ trans('kotoba::table.email') }}</th>
-			<th>{{ trans('kotoba::table.blocked') }}</th>
-			<th>{{ trans('kotoba::table.banned') }}</th>
-			<th>{{ trans('kotoba::table.confirmed') }}</th>
-			<th>{{ trans('kotoba::table.allow_direct') }}</th>
-			<th>{{ trans('kotoba::table.activated') }}</th>
-			<th>{{ trans('kotoba::table.created_at') }}</th>
+			<th>{{ trans('core::table.name') }}</th>
+			<th>{{ trans('core::table.email') }}</th>
+			<th>{{ trans('core::table.blocked') }}</th>
+			<th>{{ trans('core::table.banned') }}</th>
+			<th>{{ trans('core::table.confirmed') }}</th>
+			<th>{{ trans('core::table.allow_direct') }}</th>
+			<th>{{ trans('core::table.activated') }}</th>
+			<th>{{ trans('core::table.created_at') }}</th>
 
-			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
+			<th>{{ Lang::choice('core::table.action', 2) }}</th>
 		</tr>
 	</thead>
 	<tbody></tbody>

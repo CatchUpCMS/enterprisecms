@@ -2,7 +2,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::hr.site', 2) }} :: @parent
+{{ Lang::choice('core::hr.site', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -73,17 +73,17 @@ oTable =
 <div class="row">
 <h1>
 	@if ( Auth::user() )
-		@if ( (Auth::user()->can('manage_admin')) || (Auth::user()->can('manage_core')) )
+		@if ( (Auth::user()->can('manage-admin')) || (Auth::user()->can('manage_core')) )
 			<p class="pull-right">
-			<a href="/admin/sites/create" class="btn btn-primary" title="{{ trans('kotoba::button.new') }}">
+			<a href="/admin/sites/create" class="btn btn-primary" title="{{ trans('core::button.new') }}">
 				<i class="fa fa-plus fa-fw"></i>
-				{{ trans('kotoba::button.new') }}
+				{{ trans('core::button.new') }}
 			</a>
 			</p>
 		@endif
 	@endif
 	<i class="fa fa-angle-double-right fa-lg"></i>
-		{{ Lang::choice('kotoba::hr.site', 2) }}
+		{{ Lang::choice('core::hr.site', 2) }}
 	<hr>
 </h1>
 </div>
@@ -92,13 +92,13 @@ oTable =
 <table id="table" class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>{{ trans('kotoba::table.id') }}</th>
-			<th>{{ trans('kotoba::table.name') }}</th>
-			<th>{{ trans('kotoba::table.address') }}</th>
-			<th>{{ trans('kotoba::table.phone') }}</th>
-			<th>{{ trans('kotoba::table.website') }}</th>
+			<th>{{ trans('core::table.id') }}</th>
+			<th>{{ trans('core::table.name') }}</th>
+			<th>{{ trans('core::table.address') }}</th>
+			<th>{{ trans('core::table.phone') }}</th>
+			<th>{{ trans('core::table.website') }}</th>
 
-			<th>{{ Lang::choice('kotoba::table.action', 2) }}</th>
+			<th>{{ Lang::choice('core::table.action', 2) }}</th>
 		</tr>
 	</thead>
 	<tbody></tbody>

@@ -3,7 +3,7 @@
 
 <div class="row">
 	<h2>
-		{{ trans('kotoba::general.recent') }}&nbsp;{{ Lang::choice('kotoba::general.post', 2) }}
+		{{ trans('core::general.recent') }}&nbsp;{{ Lang::choice('core::general.post', 2) }}
 	</h2>
 	<hr>
 </div>
@@ -26,7 +26,7 @@
 		</p>
 {{--
 		<p class="margin-top-lg">
-			<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('kotoba::cms.more') }}</a>
+			<a class="btn btn-primary" href="/news/{{ $article->slug }}">{{ trans('core::cms.more') }}</a>
 		</p>
 --}}
 	</div>

@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-    {{ Lang::choice('kotoba::hr.site', 2) }} :: @parent
+    {{ Lang::choice('core::hr.site', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -40,9 +40,9 @@
         <h1>
             <p class="pull-right">
                 <a href="/admin/sites/{{ $site->id }}" class="btn btn-default"
-                   title="{{ trans('kotoba::button.back') }}">
+                   title="{{ trans('core::button.back') }}">
                     <i class="fa fa-chevron-left fa-fw"></i>
-                    {{ trans('kotoba::button.back') }}
+                    {{ trans('core::button.back') }}
                 </a>
             </p>
             <i class="fa fa-edit fa-lg"></i>
@@ -67,19 +67,19 @@
             <li role="presentation" class="active">
                 <a href="#building_info" aria-controls="building_info" role="tab" data-toggle="tab">
                     <i class="fa fa-building-o fa-lg"></i>
-                    {{ trans('kotoba::hr.building') }}&nbsp;{{ trans('kotoba::general.information') }}
+                    {{ trans('core::hr.building') }}&nbsp;{{ trans('core::general.information') }}
                 </a>
             </li>
             <li role="presentation">
                 <a href="#images" aria-controls="images" role="tab" data-toggle="tab">
                     <i class="fa fa-file-image-o fa-fw"></i>
-                    {{ Lang::choice('kotoba::cms.image', 2) }}
+                    {{ Lang::choice('core::cms.image', 2) }}
                 </a>
             </li>
             <li role="presentation">
                 <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
                     <i class="fa fa-gears fa-lg"></i>
-                    {{ Lang::choice('kotoba::general.setting', 2) }}
+                    {{ Lang::choice('core::general.setting', 2) }}
                 </a>
             </li>
         </ul>
@@ -98,7 +98,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-gavel fa-fw"></i></span>
                                     <input type="text" id="name" name="name" value="{{ $site->name }}"
-                                           placeholder="{{ trans('kotoba::account.name') }}" class="form-control"
+                                           placeholder="{{ trans('core::account.name') }}" class="form-control"
                                            autofocus="autofocus">
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-road fa-fw"></i></span>
                                     <input type="text" id="address" name="address" value="{{ $site->address }}"
-                                           placeholder="{{ trans('kotoba::account.address') }}" class="form-control">
+                                           placeholder="{{ trans('core::account.address') }}" class="form-control">
                                 </div>
                             </div>
 
@@ -115,7 +115,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-home fa-fw"></i></span>
                                     <input type="text" id="city" name="city" value="{{ $site->city }}"
-                                           placeholder="{{ trans('kotoba::account.city') }}" class="form-control">
+                                           placeholder="{{ trans('core::account.city') }}" class="form-control">
                                 </div>
                             </div>
 
@@ -123,7 +123,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-star fa-fw"></i></span>
                                     <input type="text" id="state" name="state" value="{{ $site->state }}"
-                                           placeholder="{{ trans('kotoba::account.state') }}" class="form-control">
+                                           placeholder="{{ trans('core::account.state') }}" class="form-control">
                                 </div>
                             </div>
 
@@ -131,7 +131,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-paper-plane fa-fw"></i></span>
                                     <input type="text" id="zipcode" name="zipcode" value="{{ $site->zipcode }}"
-                                           placeholder="{{ trans('kotoba::account.zipcode') }}" class="form-control">
+                                           placeholder="{{ trans('core::account.zipcode') }}" class="form-control">
                                 </div>
                             </div>
 
@@ -141,7 +141,7 @@
 
                             <div class="form-group padding-bottom-xl">
                                 <label for="inputContact"
-                                       class="col-sm-1 control-label">{{ trans('kotoba::general.contact') }}:</label>
+                                       class="col-sm-1 control-label">{{ trans('core::general.contact') }}:</label>
                                 <div class="col-sm-11">
                                     {!!
                                         Form::select(
@@ -160,7 +160,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
                                     <input type="text" id="phone_1" name="phone_1" value="{{ $site->phone_1 }}"
-                                           placeholder="{{ trans('kotoba::account.phone_1') }}" class="form-control">
+                                           placeholder="{{ trans('core::account.phone_1') }}" class="form-control">
                                 </div>
                             </div>
 
@@ -168,7 +168,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-fax fa-fw"></i></span>
                                     <input type="text" id="phone_2" name="phone_2" value="{{ $site->phone_2 }}"
-                                           placeholder="{{ trans('kotoba::account.phone_2') }}" class="form-control">
+                                           placeholder="{{ trans('core::account.phone_2') }}" class="form-control">
                                 </div>
                             </div>
 
@@ -176,7 +176,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-at fa-fw"></i></span>
                                     <input type="text" id="email" name="email" value="{{ $site->email }}"
-                                           placeholder="{{ trans('kotoba::general.email') }}" class="form-control">
+                                           placeholder="{{ trans('core::general.email') }}" class="form-control">
                                 </div>
                             </div>
 
@@ -184,7 +184,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-building fa-fw"></i></span>
                                     <input type="text" id="bld_number" name="website" value="{{ $site->bld_number }}"
-                                           placeholder="{{ trans('kotoba::hr.building') }} {{ Lang::choice('kotoba::general.number', 1) }}"
+                                           placeholder="{{ trans('core::hr.building') }} {{ Lang::choice('core::general.number', 1) }}"
                                            class="form-control">
                                 </div>
                             </div>
@@ -202,7 +202,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
                                     <textarea id="notes" name="notes" value="{{ $site->notes }}"
-                                              placeholder="{{ Lang::choice('kotoba::general.note', 2) }}"
+                                              placeholder="{{ Lang::choice('core::general.note', 2) }}"
                                               class="form-control" rows="5"></textarea>
                                 </div>
                             </div>
@@ -221,7 +221,7 @@
                             <div class="padding">
 
                                 <h3>
-                                    {{ Lang::choice('kotoba::cms.image', 1) }}
+                                    {{ Lang::choice('core::cms.image', 1) }}
                                 </h3>
                                 <hr>
 
@@ -254,14 +254,14 @@
 
                                 <h3>
                                     <i class="fa fa-file-image-o fa-fw"></i>
-                                    {{ trans('kotoba::general.command.select_an') . '&nbsp;' . Lang::choice('kotoba::cms.image', 1) }}
+                                    {{ trans('core::general.command.select_an') . '&nbsp;' . Lang::choice('core::cms.image', 1) }}
                                 </h3>
                                 <hr>
 
                                 <select id="image_select" name="image_id" class="form-control chosen-select"
                                         onchange="setImage(this);">
                                     <option value=""
-                                            label="">{{ trans('kotoba::general.command.select_an') . '&nbsp;' . Lang::choice('kotoba::cms.image', 1) }}</option>
+                                            label="">{{ trans('core::general.command.select_an') . '&nbsp;' . Lang::choice('core::cms.image', 1) }}</option>
                                     @foreach($get_images as $get_image)
                                         <option value="{{ $get_image->id }}"
                                                 label="../../../system/files/images/{{ $get_image->id }}/preview/{{ $get_image->image_file_name }}">{{ $get_image->image_file_name }}</option>
@@ -269,7 +269,7 @@
                                 </select>
 
                                 <h3 class="margin-top-xl">
-                                    {{ Lang::choice('kotoba::cms.image', 1) }}
+                                    {{ Lang::choice('core::cms.image', 1) }}
                                 </h3>
 
                                 <hr>
@@ -282,13 +282,13 @@
 
                                 {{--
                                     <div class="form-group">
-                                        {!! Form::label('featured_image', Lang::choice('kotoba::cms.image', 1), ['class' => 'control-label']) !!}
+                                        {!! Form::label('featured_image', Lang::choice('core::cms.image', 1), ['class' => 'control-label']) !!}
                                         <div class="imageTarget" rel="{{ $thumbnailPath }}"></div>
                                         {!! Form::hidden('featured_image', Input::old('featured_image'), ['id' => 'featured_image', 'class' => 'form-control hidden']) !!}
                                     </div>
                                     <div class="form-group">
-                                        <a class="btn btn-default btn-rect btn-grad" id="changeFeaturedImage" data-toggle="modal" data-target="#featuredImageModal">{{ trans('kotoba::general.change') }}</a>
-                                        <a class="btn btn-metis-3 btn-rect btn-grad" id="clearFeaturedImage">{{ trans('kotoba::general.clear') }}</a>
+                                        <a class="btn btn-default btn-rect btn-grad" id="changeFeaturedImage" data-toggle="modal" data-target="#featuredImageModal">{{ trans('core::general.change') }}</a>
+                                        <a class="btn btn-metis-3 btn-rect btn-grad" id="clearFeaturedImage">{{ trans('core::general.clear') }}</a>
                                     </div>
                                 --}}
 
@@ -311,7 +311,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-globe fa-fw"></i></span>
                                     <input type="text" id="website" name="website" value="{{ $site->website }}"
-                                           placeholder="{{ trans('kotoba::account.website') }}" class="form-control">
+                                           placeholder="{{ trans('core::account.website') }}" class="form-control">
                                 </div>
                             </div>
 
@@ -319,7 +319,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-link fa-fw"></i></span>
                                     <input type="text" id="slug" name="slug" value="{{ $site->slug }}"
-                                           placeholder="{{ trans('kotoba::general.slug') }}" class="form-control">
+                                           placeholder="{{ trans('core::general.slug') }}" class="form-control">
                                 </div>
                             </div>
 
@@ -327,7 +327,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-registered fa-fw"></i></span>
                                     <input type="text" id="theme_slug" name="theme_slug" value="{{ $site->theme_slug }}"
-                                           placeholder="{{ trans('kotoba::general.slug') }} {{ Lang::choice('kotoba::general.theme', 1) }}"
+                                           placeholder="{{ trans('core::general.slug') }} {{ Lang::choice('core::general.theme', 1) }}"
                                            class="form-control">
                                 </div>
                             </div>
@@ -336,7 +336,7 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-google fa-fw"></i></span>
                                     <textarea id="google_analytics" name="google_analytics"
-                                              placeholder="{{ trans('kotoba::cms.google_analytics') }}"
+                                              placeholder="{{ trans('core::cms.google_analytics') }}"
                                               class="form-control" rows="11">{{{ $site->google_analytics }}}</textarea>
                                 </div>
                             </div>
@@ -344,7 +344,7 @@
 
                             {{--
                             <div class="form-group padding-bottom-xl">
-                                <label for="inputDivision" class="col-sm-1 control-label">{{ Lang::choice('kotoba::hr.division', 1) }}:</label>
+                                <label for="inputDivision" class="col-sm-1 control-label">{{ Lang::choice('core::hr.division', 1) }}:</label>
                                 <div class="col-sm-11">
                                     {!!
                                         Form::select(
@@ -365,31 +365,31 @@
                         <div class="col-sm-6">
 
                             <div class="form-group padding-bottom-xl">
-                                <label for="lea_id" class="col-sm-1 control-label">{{ trans('kotoba::hr.lea') }}
-                                    &nbsp;{{ Lang::choice('kotoba::general.id', 1) }}:</label>
+                                <label for="lea_id" class="col-sm-1 control-label">{{ trans('core::hr.lea') }}
+                                    &nbsp;{{ Lang::choice('core::general.id', 1) }}:</label>
                                 <div class="col-sm-11">
                                     <input type="text" id="lea_id" name="lea_id" value="{{ $site->lea_id }}"
-                                           placeholder="{{ trans('kotoba::hr.lea_id') }} {{ Lang::choice('kotoba::general.id', 1) }}"
+                                           placeholder="{{ trans('core::hr.lea_id') }} {{ Lang::choice('core::general.id', 1) }}"
                                            class="form-control">
                                 </div>
                             </div>
 
                             <div class="form-group padding-bottom-xl">
                                 <label for="asset_management_name"
-                                       class="col-sm-3 control-label">{{ Lang::choice('kotoba::shop.asset', 1) }}
-                                    &nbsp;{{ trans('kotoba::general.management') }}
-                                    &nbsp;{{ trans('kotoba::general.name') }}:</label>
+                                       class="col-sm-3 control-label">{{ Lang::choice('core::shop.asset', 1) }}
+                                    &nbsp;{{ trans('core::general.management') }}
+                                    &nbsp;{{ trans('core::general.name') }}:</label>
                                 <div class="col-sm-9">
                                     <input type="text" id="asset_management_name" name="asset_management_name"
                                            value="{{ $site->asset_management_name }}"
-                                           placeholder="{{ Lang::choice('kotoba::shop.asset', 1) }}&nbsp;{{ trans('kotoba::general.management') }}&nbsp;{{ trans('kotoba::general.name') }}"
+                                           placeholder="{{ Lang::choice('core::shop.asset', 1) }}&nbsp;{{ trans('core::general.management') }}&nbsp;{{ trans('core::general.name') }}"
                                            class="form-control">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="status_id"
-                                       class="col-sm-1 control-label">{{ Lang::choice('kotoba::general.status', 1) }}
+                                       class="col-sm-1 control-label">{{ Lang::choice('core::general.status', 1) }}
                                     :</label>
                                 <div class="col-sm-11">
                                     {!!
@@ -416,28 +416,28 @@
 
 
         <div class="form-group">
-            <input class="btn btn-success btn-block" type="submit" value="{{ trans('kotoba::button.save') }}">
+            <input class="btn btn-success btn-block" type="submit" value="{{ trans('core::button.save') }}">
         </div>
 
         <div class="row">
             <div class="col-sm-4">
                 <a href="/admin/sites/{{ $site->id }}" class="btn btn-default btn-block"
-                   title="{{ trans('kotoba::button.cancel') }}">
+                   title="{{ trans('core::button.cancel') }}">
                     <i class="fa fa-times fa-fw"></i>
-                    {{ trans('kotoba::button.cancel') }}
+                    {{ trans('core::button.cancel') }}
                 </a>
             </div>
 
             <div class="col-sm-4">
-                <input class="btn btn-default btn-block" type="reset" value="{{ trans('kotoba::button.reset') }}">
+                <input class="btn btn-default btn-block" type="reset" value="{{ trans('core::button.reset') }}">
             </div>
 
             <div class="col-sm-4">
                 <!-- Button trigger modal -->
                 <a data-toggle="modal" data-target="#myModal" class="btn btn-default btn-block"
-                   title="{{ trans('kotoba::button.delete') }}">
+                   title="{{ trans('core::button.delete') }}">
                     <i class="fa fa-trash-o fa-fw"></i>
-                    {{ trans('kotoba::general.command.delete') }}
+                    {{ trans('core::general.command.delete') }}
                 </a>
             </div>
         </div>

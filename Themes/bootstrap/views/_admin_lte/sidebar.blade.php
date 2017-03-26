@@ -31,13 +31,13 @@
 <ul class="sidebar-menu">
 
 	<li class="header">
-		{{ Lang::choice('kotoba::general.setting', 2) }}
+		{{ Lang::choice('core::general.setting', 2) }}
 	</li>
 	<li class="treeview @yield('sidebar_staff')">
 		<a href="#">
 			<i class="fa fa-users fa-fw"></i>&nbsp;
 			<span>
-				{{ trans('kotoba::general.staff') }}
+				{{ trans('core::general.staff') }}
 			</span>&nbsp;
 			<i class="fa fa-angle-left pull-right"></i>
 		</a>
@@ -45,25 +45,25 @@
 			<li @yield('sidebar_agents')>
 				<a href="{{ url('support/agents') }}">
 					<i class="fa fa-user fa-fw"></i>
-					{{ trans('kotoba::helpdesk.agents') }}
+					{{ trans('core::helpdesk.agents') }}
 				</a>
 			</li>
 			<li @yield('sidebar_departments')>
 				<a href="{{ url('support/departments') }}">
 					<i class="fa fa-building-o fa-fw"></i>
-					{{ trans('kotoba::helpdesk.departments') }}
+					{{ trans('core::helpdesk.departments') }}
 				</a>
 			</li>
 			<li @yield('sidebar_teams')>
 				<a href="{{ url('support/teams') }}">
 					<i class="fa fa-users fa-fw"></i>
-					{{ trans('kotoba::helpdesk.teams') }}
+					{{ trans('core::helpdesk.teams') }}
 				</a>
 			</li>
 			<li @yield('sidebar_groups')>
 				<a href="{{ url('support/groups') }}">
 					<i class="fa fa-group fa-fw"></i>
-					{{ trans('kotoba::helpdesk.groups') }}
+					{{ trans('core::helpdesk.groups') }}
 				</a>
 			</li>
 		</ul>
@@ -73,7 +73,7 @@
 		<a href="#">
 			<i class="fa fa-envelope-o fa-fw"></i>&nbsp;
 			<span>
-				{{ trans('kotoba::general.mail') }}
+				{{ trans('core::general.mail') }}
 			</span>&nbsp;
 			<i class="fa fa-angle-left pull-right"></i>
 		</a>
@@ -81,25 +81,25 @@
 			<li @yield('sidear_email')>
 				<a href="{{ url('support/emails') }}">
 					<i class="fa fa-envelope-o fa-fw"></i>
-					{{ trans('kotoba::general.mail') }}
+					{{ trans('core::general.mail') }}
 				</a>
 			</li>
 			<li @yield('sidebar_ban')>
 				<a href="{{ url('support/banlist') }}">
 					<i class="fa fa-ban fa-fw"></i>
-					{{ trans('kotoba::helpdesk.ban_lists') }}
+					{{ trans('core::helpdesk.ban_lists') }}
 				</a>
 			</li>
 			<li @yield('sidebar_template')>
 				<a href="{{ url('support/list-directories') }}">
 					<i class="fa fa-files-o fa-fw"></i>
-					{{ trans('kotoba::helpdesk.templates') }}
+					{{ trans('core::helpdesk.templates') }}
 				</a>
 			</li>
 			<li @yield('sidebar_diagnostics')>
 				<a href="{{ url('support/getdiagno') }}">
 					<i class="fa fa-check fa-fw"></i>
-					{{ trans('kotoba::helpdesk.diagnostics') }}
+					{{ trans('core::helpdesk.diagnostics') }}
 				</a>
 			</li>
 		</ul>
@@ -109,7 +109,7 @@
 		<a href="#">
 			<i class="fa fa-cubes fa-fw"></i>&nbsp;
 			<span>
-				{{ trans('kotoba::helpdesk.manage') }}
+				{{ trans('core::helpdesk.manage') }}
 			</span>&nbsp;
 			<i class="fa fa-angle-left pull-right"></i>
 		</a>
@@ -117,25 +117,25 @@
 			<li @yield('sidear_help')>
 				<a href="{{ url('support/helptopic') }}">
 					<i class="fa fa-file-text-o fa-fw"></i>
-					{{ trans('kotoba::helpdesk.help_topics') }}
+					{{ trans('core::helpdesk.help_topics') }}
 				</a>
 			</li>
 			<li @yield('sidebar_sla')>
 				<a href="{{ url('support/sla') }}">
 					<i class="fa fa-clock-o fa-fw"></i>
-					{{ trans('kotoba::helpdesk.sla_plans') }}
+					{{ trans('core::helpdesk.sla_plans') }}
 				</a>
 			</li>
 			<li @yield('sidebar_forms')>
 				<a href="{{ url('support/forms') }}">
 					<i class="fa fa-file-text fa-fw"></i>
-					{{ trans('kotoba::helpdesk.forms') }}
+					{{ trans('core::helpdesk.forms') }}
 				</a>
 			</li>
 			<li @yield('sidebar_workflow')>
 				<a href="{{ url('support/workflow') }}">
 					<i class="fa fa-sitemap fa-fw"></i>
-					{{ trans('kotoba::helpdesk.workflow') }}
+					{{ trans('core::helpdesk.workflow') }}
 				</a>
 			</li>
 		</ul>
@@ -145,7 +145,7 @@
 		<a href="#">
 			<i class="fa fa-cog fa-fw"></i>&nbsp;
 			<span>
-				{{ trans('kotoba::helpdesk.system-settings') }}
+				{{ trans('core::helpdesk.system-settings') }}
 			</span>&nbsp;
 			<i class="fa fa-angle-left pull-right"></i>
 		</a>
@@ -153,43 +153,43 @@
 			<li @yield('sidear_company')>
 				<a href="{{ url('support/getcompany') }}">
 					<i class="fa fa-industry fa-fw"></i>
-					{{ trans('kotoba::helpdesk.company') }}
+					{{ trans('core::helpdesk.company') }}
 				</a>
 			</li>
 			<li @yield('sidebar_system')>
 				<a href="{{ url('support/getsystem') }}">
 					<i class="fa fa-laptop fa-fw"></i>
-					{{ trans('kotoba::helpdesk.system') }}
+					{{ trans('core::helpdesk.system') }}
 				</a>
 			</li>
 			<li @yield('sidebar_email')>
 				<a href="{{ url('support/getemail') }}">
 					<i class="fa fa-at fa-fw"></i>
-					{{ trans('kotoba::helpdesk.email') }}
+					{{ trans('core::helpdesk.email') }}
 				</a>
 			</li>
 			<li @yield('sidebar_tickets')>
 				<a href="{{ url('support/getticket') }}">
 					<i class="fa fa-ticket fa-fw"></i>
-					{{ trans('kotoba::helpdesk.ticket') }}
+					{{ trans('core::helpdesk.ticket') }}
 				</a>
 			</li>
 			<li @yield('sidear_auto_response')>
 				<a href="{{ url('support/getalert') }}">
 					<i class="fa fa-bell-o fa-fw"></i>
-					{{ trans('kotoba::helpdesk.alert_notices') }}
+					{{ trans('core::helpdesk.alert_notices') }}
 				</a>
 			</li>
 			<li @yield('sidebar_languages')>
 				<a href="{{ url('support/languages') }}">
 					<i class="fa fa-language fa-fw"></i>
-					{{ trans('kotoba::helpdesk.language') }}
+					{{ trans('core::helpdesk.language') }}
 				</a>
 			</li>
 			<li @yield('sidebar_cron')>
 				<a href="{{ url('support/job-scheduler') }}">
 					<i class="fa fa-hourglass fa-fw"></i>
-					{{ trans('kotoba::helpdesk.cron') }}
+					{{ trans('core::helpdesk.cron') }}
 				</a>
 			</li>
 		</ul>
@@ -199,7 +199,7 @@
 		<a href="#">
 			<i class="fa fa-pie-chart fa-fw"></i>&nbsp;
 			<span>
-				{{ trans('kotoba::helpdesk.widgets') }}
+				{{ trans('core::helpdesk.widgets') }}
 			</span>&nbsp;
 			<i class="fa fa-angle-left pull-right"></i>
 		</a>
@@ -207,13 +207,13 @@
 			<li @yield('sidear_widget')>
 				<a href="{{ url('support/widgets') }}">
 					<i class="fa fa-list-alt fa-fw"></i>
-					{{ trans('kotoba::helpdesk.widgets') }}
+					{{ trans('core::helpdesk.widgets') }}
 				</a>
 			</li>
 			<li @yield('sidebar_social')>
 				<a href="{{ url('support/social-buttons') }}">
 					<i class="fa fa-cubes fa-fw"></i>
-					{{ trans('kotoba::helpdesk.social') }}
+					{{ trans('core::helpdesk.social') }}
 				</a>
 			</li>
 		</ul>
@@ -223,7 +223,7 @@
 		<a href="{{ url('support/plugins') }}">
 			<i class="fa fa-plug fa-fw"></i>&nbsp;
 			<span>
-				{{ trans('kotoba::helpdesk.plugin') }}
+				{{ trans('core::helpdesk.plugin') }}
 			</span>&nbsp;
 		</a>
 	</li>

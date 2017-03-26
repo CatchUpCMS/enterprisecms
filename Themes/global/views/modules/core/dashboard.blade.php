@@ -2,7 +2,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-    {{ trans('kotoba::general.dashboard') }} :: @parent
+    {{ trans('core::general.dashboard') }} :: @parent
 @stop
 
 @section('styles')
@@ -22,13 +22,13 @@
     <div class="row">
         <h1>
             <p class="pull-right">
-                <a href="/" class="btn btn-primary" title="{{ trans('kotoba::cms.site') }}">
+                <a href="/" class="btn btn-primary" title="{{ trans('core::cms.site') }}">
                     <i class="fa fa-globe fa-fw"></i>
-                    {{ Lang::choice('kotoba::cms.site', 1) }}
+                    {{ Lang::choice('core::cms.site', 1) }}
                 </a>
             </p>
             <i class="fa fa-dashboard fa-lg"></i>
-            {{ trans('kotoba::cms.dashboard') }}
+            {{ trans('core::cms.dashboard') }}
             <hr>
         </h1>
     </div>
@@ -43,7 +43,7 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.customer', 1) }} {{ Lang::choice('kotoba::shop.catalog', 1) }}
+                                {{ Lang::choice('core::shop.customer', 1) }} {{ Lang::choice('core::shop.catalog', 1) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -57,7 +57,7 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.production', 1) }} {{ Lang::choice('kotoba::shop.catalog', 1) }}
+                                {{ Lang::choice('core::shop.production', 1) }} {{ Lang::choice('core::shop.catalog', 1) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -71,7 +71,7 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.vendor', 1) }} {{ Lang::choice('kotoba::shop.catalog', 1) }}
+                                {{ Lang::choice('core::shop.vendor', 1) }} {{ Lang::choice('core::shop.catalog', 1) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -88,7 +88,7 @@
                     <div class="panel panel-success">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.customer', 2) }}
+                                {{ Lang::choice('core::shop.customer', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -133,7 +133,7 @@
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.zone', 2) }}
+                                {{ Lang::choice('core::shop.zone', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -147,7 +147,7 @@
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.rack', 2) }}
+                                {{ Lang::choice('core::shop.rack', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -161,7 +161,7 @@
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.pallet', 2) }}
+                                {{ Lang::choice('core::shop.pallet', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -178,7 +178,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.receivable', 2) }}
+                                {{ Lang::choice('core::shop.receivable', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -192,7 +192,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.shippable', 2) }}
+                                {{ Lang::choice('core::shop.shippable', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -206,7 +206,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ trans('kotoba::shop.production') }}&nbsp;{{ Lang::choice('kotoba::shop.item', 2) }}
+                                {{ trans('core::shop.production') }}&nbsp;{{ Lang::choice('core::shop.item', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -227,7 +227,7 @@
                     <div class="panel panel-danger">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::general.alert', 2) }}
+                                {{ Lang::choice('core::general.alert', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -244,7 +244,7 @@
                     <div class="panel panel-danger">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.pick', 2) }}
+                                {{ Lang::choice('core::shop.pick', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -261,7 +261,7 @@
                     <div class="panel panel-danger">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ Lang::choice('kotoba::shop.move', 2) }}
+                                {{ Lang::choice('core::shop.move', 2) }}
                             </h3>
                         </div>
                         <div class="panel-body">
@@ -278,7 +278,7 @@
                     <div class="panel panel-danger">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                {{ trans('kotoba::shop.production') }}
+                                {{ trans('core::shop.production') }}
                             </h3>
                         </div>
                         <div class="panel-body">

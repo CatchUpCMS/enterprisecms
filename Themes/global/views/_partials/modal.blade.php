@@ -3,7 +3,7 @@
 
 
 	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-label="{{ trans('kotoba::general.command.close') }}"><span aria-hidden="true">&times;</span></button>
+		<button type="button" class="close" data-dismiss="modal" aria-label="{{ trans('core::general.command.close') }}"><span aria-hidden="true">&times;</span></button>
 		<h4 class="modal-title">
 		{{ $modal_title }}
 		</h4>
@@ -28,11 +28,11 @@
 
 	<div class="modal-footer">
 		<button type="button" class="btn btn-default" data-dismiss="modal">
-		{{ trans('kotoba::button.cancel') }}
+		{{ trans('core::button.cancel') }}
 		</button>
 
 		<button type="submit" class="btn btn-danger">
-		{{ trans('kotoba::button.delete') }}
+		{{ trans('core::button.delete') }}
 		</button>
 	</div>
 

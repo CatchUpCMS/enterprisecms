@@ -2,7 +2,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ trans('kotoba::general.dashboard') }} :: @parent
+{{ trans('core::general.dashboard') }} :: @parent
 @stop
 
 @section('styles')
@@ -21,13 +21,13 @@
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/" class="btn btn-primary" title="{{ trans('kotoba::cms.site') }}">
+	<a href="/" class="btn btn-primary" title="{{ trans('core::cms.site') }}">
 		<i class="fa fa-globe fa-fw"></i>
-		{{ Lang::choice('kotoba::cms.site', 1) }}
+		{{ Lang::choice('core::cms.site', 1) }}
 	</a>
 	</p>
 	<i class="fa fa-dashboard fa-lg"></i>
-		{{ trans('kotoba::cms.dashboard') }}
+		{{ trans('core::cms.dashboard') }}
 	<hr>
 </h1>
 </div>
@@ -39,7 +39,7 @@
 
 	<h2>
 		<i class="fa fa-ticket fa-lg"></i>
-			{{ Lang::choice('kotoba::general.ticket', 2) }}
+			{{ Lang::choice('core::general.ticket', 2) }}
 		<hr>
 	</h2>
 
@@ -49,14 +49,14 @@
 			<div class="panel panel-info">
 				<div class="panel-heading">
 				<h3 class="panel-title">
-					{{ Lang::choice('kotoba::general.ticket', 2) }}
+					{{ Lang::choice('core::general.ticket', 2) }}
 				</h3>
 				</div>
 				<div class="panel-body">
 
 					<dl class="dl-horizontal">
 						<dt>
-							{{ trans('kotoba::general.all') }}
+							{{ trans('core::general.all') }}
 						</dt>
 						<dd>
 							<a href="{{ URL::to('/admin/tickets') }}">
@@ -69,7 +69,7 @@
 
 					<dl class="dl-horizontal">
 						<dt>
-							{{ trans('kotoba::general.active') }}
+							{{ trans('core::general.active') }}
 						</dt>
 						<dd>
 							<a href="{{ URL::to('/admin/tickets') }}">
@@ -82,7 +82,7 @@
 
 					<dl class="dl-horizontal">
 						<dt>
-							{{ trans('kotoba::general.closed') }}
+							{{ trans('core::general.closed') }}
 						</dt>
 						<dd>
 							<a href="{{ URL::to('/admin/tickets') }}">
@@ -107,7 +107,7 @@
 
 	<h2>
 		<i class="fa fa-keyboard-o fa-lg"></i>
-		{{ Lang::choice('kotoba::shop.asset', 2) }}
+		{{ Lang::choice('core::shop.asset', 2) }}
 		<hr>
 	</h2>
 
@@ -116,7 +116,7 @@
 
 			<dl class="dl-horizontal">
 				<dt>
-					{{ trans('kotoba::general.all') }}
+					{{ trans('core::general.all') }}
 				</dt>
 				<dd>
 					<a href="{{ URL::to('/admin/asset') }}">
@@ -131,7 +131,7 @@
 
 			<dl class="dl-horizontal">
 				<dt>
-					{{ date("Y") }}&nbsp;{{ Lang::choice('kotoba::general.year', 1) }}
+					{{ date("Y") }}&nbsp;{{ Lang::choice('core::general.year', 1) }}
 				</dt>
 				<dd>
 					<a href="{{ URL::to('/admin/asset') }}">
@@ -163,13 +163,13 @@
 
 	<h2>
 		<i class="fa fa-file fa-lg"></i>
-		{{ Lang::choice('kotoba::cms.content', 2) }}
+		{{ Lang::choice('core::cms.content', 2) }}
 		<hr>
 	</h2>
 
 	<dl class="dl-horizontal">
 		<dt>
-			{{ trans('kotoba::general.all') }}
+			{{ trans('core::general.all') }}
 		</dt>
 		<dd>
 			<a href="{{ URL::to('/admin/contents') }}">
@@ -185,13 +185,13 @@
 
 	<h2>
 		<i class="fa fa-newspaper-o fa-lg"></i>
-		{{ Lang::choice('kotoba::cms.article', 2) }}
+		{{ Lang::choice('core::cms.article', 2) }}
 		<hr>
 	</h2>
 
 	<dl class="dl-horizontal">
 		<dt>
-			{{ trans('kotoba::general.all') }}
+			{{ trans('core::general.all') }}
 		</dt>
 		<dd>
 			<a href="{{ URL::to('/admin/news') }}">
@@ -207,13 +207,13 @@
 
 	<h2>
 		<i class="fa fa-lightbulb-o fa-lg"></i>
-		{{ Lang::choice('kotoba::hr.seminar', 2) }}
+		{{ Lang::choice('core::hr.seminar', 2) }}
 		<hr>
 	</h2>
 
 	<dl class="dl-horizontal">
 		<dt>
-			{{ trans('kotoba::general.all') }}
+			{{ trans('core::general.all') }}
 		</dt>
 		<dd>
 			<a href="{{ URL::to('/admin/seminars') }}">

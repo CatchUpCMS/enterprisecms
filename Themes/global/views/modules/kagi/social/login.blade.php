@@ -12,7 +12,7 @@
 	</a>
 
 	<div class="margin-top-lg">
-		<a href="/social/login" class="btn btn-primary btn-block">{{ trans('kotoba::button.log_in') }}</a>
+		<a href="/social/login" class="btn btn-primary btn-block">{{ trans('core::button.log_in') }}</a>
 	</div>
 
 

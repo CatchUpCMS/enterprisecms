@@ -3,7 +3,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::account.user', 2) }} :: @parent
+{{ Lang::choice('core::account.user', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -14,7 +14,7 @@
 @stop
 
 @section('inline-scripts')
-	var text_confirm_message = '{{ trans('kotoba::account.ask.delete') }}';
+	var text_confirm_message = '{{ trans('core::account.ask.delete') }}';
 @stop
 
 
@@ -25,9 +25,9 @@
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/admin/users" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
+	<a href="/admin/users" class="btn btn-default" title="{{ trans('core::button.back') }}">
 		<i class="fa fa-chevron-left fa-fw"></i>
-		{{ trans('kotoba::button.back') }}
+		{{ trans('core::button.back') }}
 	</a>
 	</p>
 	<i class="fa fa-user fa-lg"></i>
@@ -44,25 +44,25 @@
 		<li class="active">
 			<a href="#info" data-toggle="tab">
 				<i class="fa fa-user fa-fw"></i>
-				{{ trans('kotoba::general.information') }}
+				{{ trans('core::general.information') }}
 			</a>
 		</li>
 		<li>
 			<a href="#roles" data-toggle="tab">
 				<i class="fa fa-gavel fa-fw"></i>
-				{{ Lang::choice('kotoba::role.role', 2) }}
+				{{ Lang::choice('core::role.role', 2) }}
 			</a>
 		</li>
 		<li>
 			<a href="#user_control" data-toggle="tab">
 				<i class="fa fa-sort-amount-asc fa-fw"></i>
-				{{ trans('kotoba::auth.user_control') }}
+				{{ trans('core::auth.user_control') }}
 			</a>
 		</li>
 		<li>
 			<a href="#status" data-toggle="tab">
 				<i class="fa fa-heart fa-fw"></i>
-				{{ Lang::choice('kotoba::general.status', 1) }}
+				{{ Lang::choice('core::general.status', 1) }}
 			</a>
 		</li>
 	</ul>
@@ -73,7 +73,7 @@
 		<fieldset>
 			<h2>
 				<i class="fa fa-user fa-fw"></i>
-				{{ trans('kotoba::general.information') }}
+				{{ trans('core::general.information') }}
 				<hr>
 			</h2>
 
@@ -81,11 +81,11 @@
 			<table class="table table-striped table-hover">
 				<tbody>
 					<tr>
-						<td>{{ trans('kotoba::account.name') }}</td>
+						<td>{{ trans('core::account.name') }}</td>
 						<td>{{ $user->name }}</td>
 					</tr>
 					<tr>
-						<td>{{ trans('kotoba::account.email') }}</td>
+						<td>{{ trans('core::account.email') }}</td>
 						<td>{{ $user->email }}</td>
 					</tr>
 				</tbody>
@@ -100,7 +100,7 @@
 		<fieldset>
 			<h2>
 				<i class="fa fa-gavel fa-fw"></i>
-				{{ Lang::choice('kotoba::role.role', 2) }}
+				{{ Lang::choice('core::role.role', 2) }}
 				<hr>
 			</h2>
 
@@ -136,7 +136,7 @@
 		<fieldset>
 			<h2>
 				<i class="fa fa-sort-amount-asc fa-fw"></i>
-				{{ trans('kotoba::auth.user_control') }}
+				{{ trans('core::auth.user_control') }}
 				<hr>
 			</h2>
 
@@ -144,23 +144,23 @@
 			<table class="table table-striped table-hover">
 				<tbody>
 					<tr>
-						<td>{{ trans('kotoba::general.blocked') }}</td>
+						<td>{{ trans('core::general.blocked') }}</td>
 						<td>{!! $user->present()->iconBlocked !!}</td>
 					</tr>
 					<tr>
-						<td>{{ trans('kotoba::general.banned') }}</td>
+						<td>{{ trans('core::general.banned') }}</td>
 						<td>{!! $user->present()->iconBanned !!}</td>
 					</tr>
 					<tr>
-						<td>{{ trans('kotoba::general.confirmed') }}</td>
+						<td>{{ trans('core::general.confirmed') }}</td>
 						<td>{!! $user->present()->iconConfirmed !!}</td>
 					</tr>
 					<tr>
-						<td>{{ trans('kotoba::general.activated') }}</td>
+						<td>{{ trans('core::general.activated') }}</td>
 						<td>{!! $user->present()->iconActivated !!}</td>
 					</tr>
 					<tr>
-						<td>{{ trans('kotoba::auth.allow_direct') }}</td>
+						<td>{{ trans('core::auth.allow_direct') }}</td>
 						<td>{!! $user->present()->iconAllowDirect !!}</td>
 					</tr>
 				</tbody>
@@ -175,7 +175,7 @@
 		<fieldset>
 			<h2>
 				<i class="fa fa-heart fa-fw"></i>
-				{{ Lang::choice('kotoba::general.status', 1) }}
+				{{ Lang::choice('core::general.status', 1) }}
 				<hr>
 			</h2>
 
@@ -184,7 +184,7 @@
 				<tbody>
 					<tr>
 						<td>
-							{{ trans('kotoba::account.last_login') }}
+							{{ trans('core::account.last_login') }}
 						</td>
 						<td>
 							{{ Carbon\Carbon::parse($user->last_login)->diffForHumans() }}
@@ -195,7 +195,7 @@
 					</tr>
 					<tr>
 						<td>
-							{{ trans('kotoba::account.created_at') }}
+							{{ trans('core::account.created_at') }}
 						</td>
 						<td>
 							{{ Carbon\Carbon::parse($user->created_at)->diffForHumans() }}
@@ -206,7 +206,7 @@
 					</tr>
 					<tr>
 						<td>
-							{{ trans('kotoba::account.updated_at') }}
+							{{ trans('core::account.updated_at') }}
 						</td>
 						<td>
 							{{ Carbon\Carbon::parse($user->updated_at)->diffForHumans() }}
@@ -228,21 +228,21 @@
 
 	<div class="row">
 		<div class="col-sm-4">
-			<a href="/admin/users" class="btn btn-default btn-block" title="{{ trans('kotoba::button.back') }}">
+			<a href="/admin/users" class="btn btn-default btn-block" title="{{ trans('core::button.back') }}">
 				<i class="fa fa-chevron-left fa-fw"></i>
-				{{ trans('kotoba::button.back') }}
+				{{ trans('core::button.back') }}
 			</a>
 		</div>
 		<div class="col-sm-4">
-			<a href="/admin/users/{{ $user->id }}/edit" class="btn btn-success btn-block" title="{{ trans('kotoba::button.edit') }}">
+			<a href="/admin/users/{{ $user->id }}/edit" class="btn btn-success btn-block" title="{{ trans('core::button.edit') }}">
 				<i class="fa fa-pencil fa-fw"></i>
-				{{ trans('kotoba::button.edit') }}
+				{{ trans('core::button.edit') }}
 			</a>
 		</div>
 		<div class="col-sm-4">
-			<a class="btn btn-danger btn-block action_confirm" data-method="delete" title="{{ trans('kotoba::general.command.delete') }}" onclick="">
+			<a class="btn btn-danger btn-block action_confirm" data-method="delete" title="{{ trans('core::general.command.delete') }}" onclick="">
 				<i class="fa fa-trash-o fa-fw"></i>
-				{{ trans('kotoba::general.command.delete') }}
+				{{ trans('core::general.command.delete') }}
 			</a>
 		</div>
 	</div>

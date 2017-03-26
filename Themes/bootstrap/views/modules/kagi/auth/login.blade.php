@@ -18,10 +18,10 @@
 
 	<!-- Nav tabs -->
 	<ul class="nav nav-tabs" role="tablist">
-		<li role="presentation" class="active"><a href="#social" aria-controls="social" role="tab" data-toggle="tab">{{ trans('kotoba::button.social_log_in') }}</a></li>
-		<li role="presentation"><a href="/password/email" aria-controls="forgot_password" role="tab">{{ trans('kotoba::button.forgot_password') }}</a></li>
-		<li role="presentation"><a href="/auth/register" aria-controls="register" role="tab">{{ trans('kotoba::button.register') }}</a></li>
-		<li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">{{ trans('kotoba::button.admin') }}</a></li>
+		<li role="presentation" class="active"><a href="#social" aria-controls="social" role="tab" data-toggle="tab">{{ trans('core::button.social_log_in') }}</a></li>
+		<li role="presentation"><a href="/password/email" aria-controls="forgot_password" role="tab">{{ trans('core::button.forgot_password') }}</a></li>
+		<li role="presentation"><a href="/auth/register" aria-controls="register" role="tab">{{ trans('core::button.register') }}</a></li>
+		<li role="presentation"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">{{ trans('core::button.admin') }}</a></li>
 		@include($activeTheme . '::' . '_partials.language')
 	</ul>
 
@@ -30,7 +30,7 @@
 		<div role="tabpanel" class="tab-pane active" id="social">
 
 			<div class="form-group margin-top-xl">
-				<a href="/social/login" class="btn btn-success btn-block">{{ trans('kotoba::button.log_in') }}</a>
+				<a href="/social/login" class="btn btn-success btn-block">{{ trans('core::button.log_in') }}</a>
 			</div>
 
 		</div>
@@ -40,14 +40,14 @@
 					{!! csrf_field() !!}
 
 					<div class="form-group">
-						<label class="col-md-3 control-label">{{ trans('kotoba::account.email') }}</label>
+						<label class="col-md-3 control-label">{{ trans('core::account.email') }}</label>
 						<div class="col-md-9">
 							<input type="email" class="form-control" name="email" value="{{ old('email') }}">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label class="col-md-3 control-label">{{ trans('kotoba::auth.password') }}</label>
+						<label class="col-md-3 control-label">{{ trans('core::auth.password') }}</label>
 						<div class="col-md-9">
 							<input type="password" class="form-control" name="password">
 						</div>
@@ -58,7 +58,7 @@
 						<div class="col-md-9">
 							<div class="checkbox">
 								<label>
-									<input type="checkbox" name="remember"> {{ trans('kotoba::auth.remember_me') }}
+									<input type="checkbox" name="remember"> {{ trans('core::auth.remember_me') }}
 								</label>
 							</div>
 						</div>
@@ -68,7 +68,7 @@
 						<label class="col-md-3 control-label"></label>
 						<div class="col-md-9">
 							<button type="submit" class="btn btn-success btn-block">
-								{{ trans('kotoba::button.log_in') }}
+								{{ trans('core::button.log_in') }}
 							</button>
 						</div>
 					</div>

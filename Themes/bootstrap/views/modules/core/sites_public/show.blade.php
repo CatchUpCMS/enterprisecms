@@ -2,7 +2,7 @@
 
 {{-- Web site Title --}}
 @section('title')
-{{ Lang::choice('kotoba::account.site', 2) }} :: @parent
+{{ Lang::choice('core::account.site', 2) }} :: @parent
 @stop
 
 @section('styles')
@@ -37,9 +37,9 @@ $(document).ready(function() {
 <div class="row">
 <h1>
 	<p class="pull-right">
-	<a href="/sites" class="btn btn-default" title="{{ trans('kotoba::button.back') }}">
+	<a href="/sites" class="btn btn-default" title="{{ trans('core::button.back') }}">
 		<i class="fa fa-chevron-left fa-fw"></i>
-		{{ trans('kotoba::button.back') }}
+		{{ trans('core::button.back') }}
 	</a>
 	</p>
 	<i class="fa fa-university fa-lg"></i>
@@ -55,13 +55,13 @@ $(document).ready(function() {
 	<li role="presentation" class="active">
 		<a href="#site_info" aria-controls="site_info" role="tab" data-toggle="tab">
 		<i class="fa fa-building-o fa-lg"></i>
-		{{ Lang::choice('kotoba::cms.site', 1) }}&nbsp;{{ trans('kotoba::general.information') }}
+		{{ Lang::choice('core::cms.site', 1) }}&nbsp;{{ trans('core::general.information') }}
 		</a>
 	</li>
 	<li role="presentation">
 		<a href="#employee_info" aria-controls="employee_info" role="tab" data-toggle="tab">
 		<i class="fa fa-user fa-lg"></i>
-		{{ Lang::choice('kotoba::hr.employee', 2) }}
+		{{ Lang::choice('core::hr.employee', 2) }}
 		</a>
 	</li>
 
@@ -70,13 +70,13 @@ $(document).ready(function() {
 	<li role="presentation">
 		<a href="#rooms" aria-controls="rooms" role="tab" data-toggle="tab">
 		<i class="fa fa-plug fa-lg"></i>
-		{{ Lang::choice('kotoba::general.room', 2) }}
+		{{ Lang::choice('core::general.room', 2) }}
 		</a>
 	</li>
 	<li role="presentation">
 		<a href="#assets" aria-controls="assets" role="tab" data-toggle="tab">
 		<i class="fa fa-cubes fa-lg"></i>
-		{{ Lang::choice('kotoba::shop.asset', 2) }}
+		{{ Lang::choice('core::shop.asset', 2) }}
 		</a>
 	</li>
 @endif

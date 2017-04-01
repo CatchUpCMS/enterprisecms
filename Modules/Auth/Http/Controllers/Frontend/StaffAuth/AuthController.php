@@ -27,6 +27,10 @@ class AuthController extends BaseFrontendController
      */
     protected $user;
 
+    /*protected $loginPath = '/login'; // path to the login URL
+    protected $redirectPath = '/home'; // path to the route where you want users to be redirected once logged in
+    protected $redirectTo = '/home'; // path you're sent to once you've reset your password*/
+
     protected $lockoutTime;
     protected $maxLoginAttempts;
 
@@ -218,7 +222,7 @@ class AuthController extends BaseFrontendController
     protected function isUsingThrottlesLoginsTrait()
     {
         return in_array(
-           ThrottlesLogins::class, class_uses_recursive(get_class($this))
-       );
+            ThrottlesLogins::class, class_uses_recursive(get_class($this))
+        );
     }
 }

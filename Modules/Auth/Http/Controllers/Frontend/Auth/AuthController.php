@@ -32,6 +32,10 @@ class AuthController extends BaseFrontendController
      */
     protected $user;
 
+    /*protected $loginPath = '/login'; // path to the login URL
+    protected $redirectPath = '/home'; // path to the route where you want users to be redirected once logged in
+    protected $redirectTo = '/home'; // path you're sent to once you've reset your password*/
+
     protected $lockoutTime;
     protected $maxLoginAttempts;
 
@@ -48,7 +52,7 @@ class AuthController extends BaseFrontendController
         //$this->user = $user;
         $this->setDependencies(
             app('Caffeinated\Themes\Facades\Theme'),
-        //app('Teepluss\Theme\Contracts\Theme'),
+            //app('Teepluss\Theme\Contracts\Theme'),
             app('Illuminate\Filesystem\Filesystem')
         );
 
@@ -80,16 +84,13 @@ class AuthController extends BaseFrontendController
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        if (auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')]))
-        {
+        if (auth()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
             $user = auth()->user();
             //dd($user);
-        }else{
-            return back()->with('error','your username and password are wrong.');
+        } else {
+            return back()->with('error', 'your username and password are wrong.');
         }
     }
-
-
 
 
     /**
@@ -112,9 +113,12 @@ class AuthController extends BaseFrontendController
         // grab the credentials, and use them to attempt an auth
         if ($this->attemptLogin($request)) {
             $events = event(new \Modules\Auth\Events\UserHasLoggedIn(Auth::id()));
-
-            dd('success');
-            //return redirect()->intended('/');
+            $user = Auth::user();
+            /*
+            User::with('roles')->get();
+             **/
+            //dd($user->roles);
+            return redirect()->intended('/');
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts

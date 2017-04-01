@@ -36,12 +36,9 @@ class User extends Authenticatable
      * 
      * @param array $roles
      */
-    
     public function scopeHasRoles($query,$roles){
        return $query->whereHas('roles',function($query) use ($roles){
              $query->whereIn('name',$roles);
       });
-   }    
-    
-    
+   }
 }

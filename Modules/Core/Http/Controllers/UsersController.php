@@ -10,6 +10,15 @@ use Hash;
 
 class UsersController extends Controller
 {
+    /**
+     * Initializer.
+     *
+     * @return \CoreController
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     /**
      * Display a listing of the resource.

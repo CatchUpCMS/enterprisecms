@@ -4,7 +4,7 @@ namespace Modules\Dashboard\Http\Controllers\Config;
 
 use Modules\Dashboard\Datatables\DashboardWidgetsManager;
 use Modules\Dashboard\Services\DashboardService;
-use Modules\Dashboard\Traits\DataTableTrait;
+use Modules\Core\Traits\DataTableTrait;
 use Collective\Html\HtmlBuilder;
 
 class DashboardController extends BaseConfigController

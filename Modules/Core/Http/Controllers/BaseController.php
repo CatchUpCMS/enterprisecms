@@ -265,7 +265,15 @@ class BaseController extends Controller
         $this->data = $data;
         $this->type = $type;
 
-        return $this->theme->$type(partial($this->view), $this->data)->render();
+        //public function setView($view, $data = [], $type = 'module')
+        //return $this->setView($view, $data, 'module:core');
+        //'module:core'
+        //dd($view);
+        return Theme::View($view, $data);
+
+
+        //throw new Exception('setView Called');
+        //return $this->theme->$type(partial($this->view), $this->data)->render();
     }
 
     public function outputMethod()

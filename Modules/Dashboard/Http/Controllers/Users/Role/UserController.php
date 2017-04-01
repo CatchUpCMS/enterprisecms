@@ -2,7 +2,7 @@
 
 namespace Modules\Auth\Http\Controllers\Backend\Role;
 
-use Modules\Dashboard\Traits\DataTableTrait;
+use Modules\Core\Traits\DataTableTrait;
 use Modules\Auth\Datatables\UserManager;
 use Modules\Auth\Http\Requests\BackendAddUserToRoleRequest;
 use Modules\Auth\Models\Role;

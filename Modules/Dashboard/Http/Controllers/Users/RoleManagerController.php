@@ -4,7 +4,7 @@ namespace Modules\Auth\Http\Controllers\Backend;
 
 use Modules\Core\Http\Controllers\BaseBackendController;
 use Modules\Auth\Datatables\RoleManager;
-use Modules\Dashboard\Traits\DataTableTrait;
+use Modules\Core\Traits\DataTableTrait;
 
 class RoleManagerController extends BaseBackendController
 {

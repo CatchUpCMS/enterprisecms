@@ -21,6 +21,20 @@ $router->group([
     $router->post('save', ['as' => 'admin.config.store', 'uses' => 'WebsiteController@postStoreConfig']);
 });
 
+$router->group([
+    'prefix' => 'adminpanel',
+    'middleware' => 'hasPermission',
+    'hasPermission' => 'access@admin_config',
+], function (Router $router) {
+
+    $router->group(['prefix' => 'companies'], function (Router $router) {
+        $router->get('/', ['uses' => '\Modules\Core\Http\Controllers\CompanisController@index']);
+        $router->get('/manage', ['uses' => '\Modules\Core\Http\Controllers\CompaniesController@manager']);
+        $router->post('add', ['as' => 'admin.widget.create', 'uses' => 'CreateWidgetController@postForm']);
+    });
+});
+
+
 // URI: /{backend}/dashboard
 $router->group([
     'prefix' => 'dashboard',

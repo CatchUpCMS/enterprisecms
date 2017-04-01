@@ -5,9 +5,12 @@ namespace Modules\Core\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Request;
+use Modules\Core\Traits\DataTableTrait;
 
 class BaseBackendController extends BaseController
 {
+    use DataTableTrait;
+
     /**
      * Controls the layout for a controller.
      *
@@ -60,15 +63,15 @@ class BaseBackendController extends BaseController
         $path = sprintf('%s/themes/%s/assets/css/%s.css', public_path(), $this->themeName, $routeName);
 
         if (File::exists($path)) {
-            $this->theme->asset()->add($routeName, str_replace(public_path().'/', '', $path), array('base'));
+            $this->theme->asset()->add($routeName, str_replace(public_path() . '/', '', $path), array('base'));
         }
     }
 
     /**
      * Will send a message back to the browser, if ajax will return as json.
      *
-     * @param string  $message
-     * @param int     $status
+     * @param string $message
+     * @param int $status
      * @param Request $input
      *
      * @return json|Redirect

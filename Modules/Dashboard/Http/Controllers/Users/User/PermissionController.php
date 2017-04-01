@@ -3,7 +3,7 @@
 namespace Modules\Auth\Http\Controllers\Backend\User;
 
 use Modules\Auth\Datatables\PermissionManager;
-use Modules\Dashboard\Traits\DataTableTrait;
+use Modules\Core\Traits\DataTableTrait;
 use Modules\Auth\Models\User;
 
 class PermissionController extends BaseUserController

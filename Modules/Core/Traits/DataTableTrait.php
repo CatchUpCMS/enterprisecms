@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Dashboard\Traits;
+namespace Modules\Core\Traits;
 
 use Modules\Dashboard\Events\GotDatatableConfig;
 use Yajra\Datatables\Datatables;
@@ -39,12 +39,17 @@ trait DataTableTrait
         }
 
         // PROCESS MY PRETTIES :D
+        /*
         if (($arr = array_get($tableConfig, 'page.title', null)) !== null) {
             $this->theme->setTitle($arr);
         }
-        if (($arr = array_get($tableConfig, 'page.header', null)) !== null) {
+        */
+
+        /*if (($arr = array_get($tableConfig, 'page.header', null)) !== null) {
             $this->setActions(['header' => $arr]);
-        }
+        }*/
+
+
         if (($arr = array_get($tableConfig, 'options', null)) !== null) {
             $this->setTableOptions($arr);
         }
@@ -95,14 +100,18 @@ trait DataTableTrait
             ],
         ];
 
-        foreach ($assets as $asset) {
-            $this->theme->asset()->add($asset[0], $protocol.$asset[1], $asset[2]);
-        }
+        /*
+         *  Need to set theme
+         **/
+        /*foreach ($assets as $asset) {
+            $this->theme->asset()->add($asset[0], $protocol . $asset[1], $asset[2]);
+        }*/
     }
 
     private function getDataTableHtml($data)
     {
-        return $this->setView('admin.datatable.index', $data, 'module:admin');
+        return $this->setView('datatables.index', $data, null);
+        //return Theme::View('modules.core.frontend');
     }
 
     private function getDataTableData()
@@ -166,7 +175,7 @@ trait DataTableTrait
                     });
                 }
             });
-        // disable the inbuilt searching all together if option is false
+            // disable the inbuilt searching all together if option is false
         } else {
             $table->filter(function () {
 
@@ -262,7 +271,7 @@ trait DataTableTrait
                 $this->setOption('order', [[$counter, array_get($this->options, 'sort_order', 'desc')]]);
             }
 
-            array_set($this->options, 'columns.'.$counter, [
+            array_set($this->options, 'columns.' . $counter, [
                 'data' => $key,
                 'name' => $key,
             ]);
@@ -298,4 +307,28 @@ trait DataTableTrait
     {
         return array_get($this->options, $key, null);
     }
+
+
+    /**
+     * Set actions (Added from a Symphony bundle).
+     *
+     * @param array $actions
+     *
+     * @return $this
+     * @throws Exception
+     */
+    public function setActions(array $actions)
+    {
+        if (count($actions) > 0) {
+            foreach ($actions as $action) {
+                $newAction = new Action($this->datatableName);
+                $this->actions[] = $newAction->set($action);
+            }
+        } else {
+            throw new Exception('ActionColumn::setActions(): The actions array should contain at least one element.');
+        }
+        return $this;
+    }
+
+
 }

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use Illuminate\Routing\Router;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/core', function (Request $request) {
-    // return $request->core();
-})->middleware('auth:api');
+// Routes in this group must be authorized.
+Route::group([
+], function (Router $router) {
+    $router->get('/', ['as' => 'modules.core.companies', 'uses' => 'CompaniesController@manager']);
+});
+//->middleware('auth:api');

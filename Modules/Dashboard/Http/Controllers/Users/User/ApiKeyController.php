@@ -2,7 +2,7 @@
 
 namespace Modules\Auth\Http\Controllers\Backend\User;
 
-use Modules\Dashboard\Traits\DataTableTrait;
+use Modules\Core\Traits\DataTableTrait;
 use Modules\Auth\Datatables\ApiKeyManager;
 use Modules\Auth\Models\User;
 

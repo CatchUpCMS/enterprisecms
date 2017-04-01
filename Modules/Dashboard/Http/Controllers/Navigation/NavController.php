@@ -5,7 +5,7 @@ namespace Modules\Dashboard\Http\Controllers\Navigation;
 use Modules\Dashboard\Datatables\NavigationManager;
 use Modules\Dashboard\Http\Controllers\BaseAdminController;
 use Modules\Dashboard\Http\Requests\BackendCreateNavigationRequest;
-use Modules\Dashboard\Traits\DataTableTrait;
+use Modules\Core\Traits\DataTableTrait;
 use Modules\Core\Models\Navigation;
 use Former\Facades\Former;
 

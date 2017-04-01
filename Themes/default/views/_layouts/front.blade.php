@@ -226,6 +226,7 @@
 </head>
 <body class="Site">
 
+FRONT
 
 <nav class="navbar navbar-default navbar-fixed-top topbar">
     <div class="container-fluid">

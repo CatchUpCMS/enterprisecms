@@ -1,3 +1,5 @@
+@if (Auth::guest())
+@else
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
         <img src="http://lorempixel.com/30/30/people" class="img-circle">{{ Auth::user()->user_name }}<span class="caret"></span>
@@ -22,4 +24,4 @@
         </li>
     </ul>
 </li>
-
+@endif

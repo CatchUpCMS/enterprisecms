@@ -260,7 +260,7 @@
                     </button>
                 </li>
 
-                @include('default::_partials.admin.navigation_profile')
+                {{--@include('default::_partials.admin.navigation_profile')--}}
 
                 <li>
                     <button class="navbar-btn">

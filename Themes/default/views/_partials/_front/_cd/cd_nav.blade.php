@@ -62,98 +62,105 @@
         </li>
 
 
-        @if (Auth::user() && (Auth::user()->hasRole('staff')) ||  Auth::user()->hasRole('admin'))
+        @if (Auth::guest())
 
 
-            <li class="has-children">
-                <a href="#">
-                    <i class="fa fa-magnet fa-fw"></i>
-                    Helpdesk Control Panel') }}
-                </a>
+        @else
+            @if (Auth::user() && (Auth::user()->hasRole('staff')) ||  Auth::user()->hasRole('admin'))
 
-                <ul class="cd-nav-icons is-hidden">
-                    <li class="go-back"><a href="#0">Go Back</a></li>
 
-                    @if ( Auth::user()->can('manage-admin') )
+                <li class="has-children">
+                    <a href="#">
+                        <i class="fa fa-magnet fa-fw"></i>
+                        Helpdesk Control Panel') }}
+                    </a>
+
+                    <ul class="cd-nav-icons is-hidden">
+                        <li class="go-back"><a href="#0">Go Back</a></li>
+
+                        @if ( Auth::user()->can('manage-admin') )
+                            <li>
+                                <a class="cd-nav-item" href="/admin">
+                                    <i class="fa fa-cogs fa-fw"></i>
+                                    {{ trans('core::helpdesk.admin_panel') }}
+                                </a>
+                            </li>
+                        @endif
+
                         <li>
-                            <a class="cd-nav-item" href="/admin">
-                                <i class="fa fa-cogs fa-fw"></i>
-                                {{ trans('core::helpdesk.admin_panel') }}
+                            <a class="cd-nav-item" href="/staff/dashboard/{{ Auth::user()->id }}">
+                                <i class="fa fa-dashboard fa-fw"></i>
+                                {{ trans('core::general.dashboard') }}
                             </a>
                         </li>
-                    @endif
 
-                    <li>
-                        <a class="cd-nav-item" href="/staff/dashboard/{{ Auth::user()->id }}">
-                            <i class="fa fa-dashboard fa-fw"></i>
-                            {{ trans('core::general.dashboard') }}
-                        </a>
-                    </li>
+                        <li>
+                            <a class="cd-nav-item" href="/staff">
+                                <i class="fa fa-sign-in fa-fw"></i>
+                                {{ trans('core::general.staff') }}&nbsp;{{ trans('core::cms.portal') }}
+                            </a>
+                        </li>
 
-                    <li>
-                        <a class="cd-nav-item" href="/staff">
-                            <i class="fa fa-sign-in fa-fw"></i>
-                            {{ trans('core::general.staff') }}&nbsp;{{ trans('core::cms.portal') }}
-                        </a>
-                    </li>
+                        @if ( !Auth::user()->can('manage-admin') )
+                            <li>
+                                <a class="cd-nav-item" href="/">
+                                </a>
+                            </li>
+                        @endif
 
-                    @if ( !Auth::user()->can('manage-admin') )
+                        {{--
+                                    @if ( Auth::user()->can('manage_support') )
+                                        <li>
+                                            <a class="cd-nav-item" href="/agent/dashboard">
+                                                <i class="fa fa-ticket fa-fw"></i>
+                                                {{ trans('core::helpdesk.agent_panel') }}
+                                            </a>
+                                        </li>
+                                    @endif
+                        --}}
+
+                        <li>
+                            <a class="cd-nav-item" href="/helpdesk">
+                                <i class="fa fa-ticket fa-fw"></i>
+                                {{ trans('core::helpdesk.helpdesk') }}
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="cd-nav-item" href="/helpdesk/knowledgebase">
+                                <i class="fa fa-lightbulb-o fa-fw"></i>
+                                {{ trans('core::helpdesk.knowledge_base') }}
+                            </a>
+                        </li>
+
                         <li>
                             <a class="cd-nav-item" href="/">
                             </a>
                         </li>
-                    @endif
 
-                    {{--
-                                @if ( Auth::user()->can('manage_support') )
-                                    <li>
-                                        <a class="cd-nav-item" href="/agent/dashboard">
-                                            <i class="fa fa-ticket fa-fw"></i>
-                                            {{ trans('core::helpdesk.agent_panel') }}
-                                        </a>
-                                    </li>
-                                @endif
-                    --}}
+                        <li>
+                            <a class="cd-nav-item" href="/auth/logout">
+                                <i class="fa fa-sign-out fa-fw"></i>
+                                {{ trans('core::auth.sign_out') }}
+                            </a>
+                        </li>
 
-                    <li>
-                        <a class="cd-nav-item" href="/helpdesk">
-                            <i class="fa fa-ticket fa-fw"></i>
-                            {{ trans('core::helpdesk.helpdesk') }}
-                        </a>
-                    </li>
+                    </ul>
+                </li>
 
-                    <li>
-                        <a class="cd-nav-item" href="/helpdesk/knowledgebase">
-                            <i class="fa fa-lightbulb-o fa-fw"></i>
-                            {{ trans('core::helpdesk.knowledge_base') }}
-                        </a>
-                    </li>
+            @else
 
-                    <li>
-                        <a class="cd-nav-item" href="/">
-                        </a>
-                    </li>
+                <li>
+                    <a href="/staff/login">
+                        Staff Login
+                    </a>
+                </li>
 
-                    <li>
-                        <a class="cd-nav-item" href="/auth/logout">
-                            <i class="fa fa-sign-out fa-fw"></i>
-                            {{ trans('core::auth.sign_out') }}
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
-
-        @else
-
-            <li>
-                <a href="/staff/login">
-                    Staff Login
-                </a>
-            </li>
-
+            @endif
         @endif
-                    <!-- login -->
+
+
+                        <!-- login -->
     </ul> <!-- primary-nav -->
 </nav>
 <!-- cd-nav -->
